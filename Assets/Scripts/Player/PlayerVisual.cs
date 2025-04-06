@@ -15,4 +15,10 @@ public class WithVisual : MonoBehaviour
     {
         animator.SetBool(IS_RUNNING, PlayerMove.Instance.IsRunning());
     }
+
+    //private Vector3 GetMousePosition() //переделать метод добавив в класс GameInput
+    //{
+    //    var mousePos = Input.mousePosition;
+    //    return mousePos;
+    //}
 }
