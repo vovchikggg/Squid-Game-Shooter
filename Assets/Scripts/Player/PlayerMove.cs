@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private PlayerInputActions playerInputActions;
+
     private float minMovingSpeed = 0.1f; //inputVector может быть очень маленьким, т.к float!
     private bool isRunning = false;
 
@@ -16,6 +18,8 @@ public class PlayerMove : MonoBehaviour
     {
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Enable();
     }
 
     //private void Update() // запускается каждый кадр
@@ -27,28 +31,7 @@ public class PlayerMove : MonoBehaviour
 
     private void HandleMovement()
     {
-        var inputVector = new Vector2(0, 0);
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            inputVector.y = 1f;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            inputVector.y = -1f;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-
-            inputVector.x = -1f;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            inputVector.x = 1f;
-        }
+        var inputVector = GameInput.Instance.GetMovementVector();
 
         inputVector = inputVector.normalized; // приводит длину к ед, т.к по диагонали (1,1)
 
@@ -58,6 +41,12 @@ public class PlayerMove : MonoBehaviour
             isRunning = true;
         else
             isRunning = false;
+    }
+
+    public Vector3 GetPlayerScreenPosition()
+    {
+        var playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        return playerScreenPosition;
     }
 
     public bool IsRunning()

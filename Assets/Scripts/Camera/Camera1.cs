@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Camera1 : MonoBehaviour
 {
     private Transform player;
 
