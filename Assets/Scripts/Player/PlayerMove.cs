@@ -1,51 +1,57 @@
 using UnityEngine;
+using System;
 
 public class PlayerMove : MonoBehaviour
 {
-    //[SerializeField] чтобы переменная отображ в Unity, но осталась private
+    public static PlayerMove Instance { get; private set; }
+    //[SerializeField] пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Unity, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ private
     [SerializeField] private float movingSpeed = 5f;
+
     private Rigidbody2D rb;
 
-    public Rigidbody2D GetRigidbody2D()
+    private PlayerInputActions playerInputActions;
+
+    private float minMovingSpeed = 0.1f; //inputVector пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ.пїЅ float!
+    private bool isRunning = false;
+
+    private void Awake() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Start. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     {
-        return rb;
-    }
-    
-    private void Awake() // запускается до метода Start. Типо инициализация объектов
-    {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Enable();
     }
 
-    //private void Update() // запускается каждый кадр
+    //private void Update() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
-    private void FixedUpdate() // запускается через равные промежутки времени (сейчас 50 р/с), поэтому физика здесь               
+    private void FixedUpdate() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ 50 пїЅ/пїЅ), пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ               
     {
-        var inputVector = new Vector2(0, 0);
+        HandleMovement();
+    }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            inputVector.y = 1f;
-        }
+    private void HandleMovement()
+    {
+        var inputVector = GameInput.Instance.GetMovementVector();
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            inputVector.y = -1f;
-        }
+        inputVector = inputVector.normalized; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ, пїЅ.пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (1,1)
 
-        if (Input.GetKey(KeyCode.A))
-        {
+        rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime)); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ fixedDeltaTime,
+                                                                                          // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ n пїЅ/пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+        if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
+            isRunning = true;
+        else
+            isRunning = false;
+    }
 
-            inputVector.x = -1f;
-        }
+    public Vector3 GetPlayerScreenPosition()
+    {
+        var playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        return playerScreenPosition;
+    }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            inputVector.x = 1f;
-        }
-
-        inputVector = inputVector.normalized; // приводит длину к ед, т.к по диагонали (1,1)
-
-        rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime)); //уменьшаем в fixedDeltaTime,
-    }                                                               // но вызывааем n р/с поэтому он равен себе
+    public bool IsRunning()
+    {
+        return isRunning;
+    }
 
 }
