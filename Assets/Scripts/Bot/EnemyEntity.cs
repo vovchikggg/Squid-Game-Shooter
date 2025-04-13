@@ -8,15 +8,11 @@ public class EnemyEntity : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private HealthBar healthBar;
     private int _currentHealth;
-
-    private void Awake()
-    {
-        maxHealth = 100;
-    }
-
+    
     private void Start()
     {
         _currentHealth = maxHealth;
+        healthBar.SetMaxHealth(_currentHealth);
         healthBar.SetHealth(_currentHealth);
     }
 

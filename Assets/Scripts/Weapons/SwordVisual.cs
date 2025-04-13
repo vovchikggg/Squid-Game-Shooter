@@ -12,5 +12,8 @@ public class SwordVisual : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
+    private void TriggerEndAttackAnimation()
+    {
+        sword.AttackColliderTurnOff();
+    }
 }
