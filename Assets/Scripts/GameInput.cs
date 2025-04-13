@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
@@ -6,11 +8,21 @@ public class GameInput : MonoBehaviour
 
     public static GameInput Instance { get; private set; }
 
+    public event EventHandler OnPlayerAttack;
+
     private void Awake()
     {
         Instance = this;
         playerInputActions = new PlayerInputActions();
         playerInputActions.Enable();
+
+        playerInputActions.Combat.Attack.started += PlayerAttack_started; //добавляем функцию в Actions
+    }
+
+    private void PlayerAttack_started(InputAction.CallbackContext obj)
+    {
+        if (OnPlayerAttack != null) //Есть объекты, которые вызывают
+            OnPlayerAttack.Invoke(this,EventArgs.Empty);
     }
 
     public Vector2 GetMovementVector() // для работы с InputActions
