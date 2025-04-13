@@ -53,5 +53,13 @@ public class PlayerMove : MonoBehaviour
     {
         return isRunning;
     }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+        {
+            enemyEntity.TakeDamage(1);
+        }
+    }
 
 }

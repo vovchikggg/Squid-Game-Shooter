@@ -19,7 +19,10 @@ public class Bot : MonoBehaviour
     private enum State
     {
         Idle,
-        Roaming
+        Roaming,
+        Chasing,
+        Attacking,
+        Death
     }
 
     private void Awake()
@@ -34,9 +37,6 @@ public class Bot : MonoBehaviour
     {
         switch (state)
         {
-            default:
-            case State.Idle:
-                break;
             case State.Roaming:
                 roamingTime -= Time.deltaTime;
                 if (roamingTime < 0)
@@ -44,7 +44,16 @@ public class Bot : MonoBehaviour
                     Roaming();
                     roamingTime = roamingTimerMax;
                 }
-
+                break;
+            case State.Chasing:
+                ChasingTarget();
+                break;
+            case State.Attacking:
+                break;
+            case State.Death:
+                break;
+            default:
+            case State.Idle:
                 break;
         }
     }
@@ -54,6 +63,11 @@ public class Bot : MonoBehaviour
         startingPosition = transform.position;
         roamingPosition = GetRoamingPosition();
         navMeshAgent.SetDestination(roamingPosition);
+    }
+
+    private void ChasingTarget()
+    {
+        navMeshAgent.SetDestination(PlayerMove.Instance.transform.position);
     }
 
     private Vector3 GetRoamingPosition()

@@ -29,4 +29,12 @@ public class WithVisual : MonoBehaviour
         else
             spriteRenderer.flipX = false;
     }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+        {
+            Debug.Log(100);
+        }
+    }
 }

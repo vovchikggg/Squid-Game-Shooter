@@ -11,7 +11,7 @@ public class Camera1 : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector2 temp = transform.position; //Важен именно Vector3, а не Vector2
+        Vector3 temp = transform.position; //Важен именно Vector3, а не Vector2
         temp.x = player.position.x;
         temp.y = player.position.y;
 
