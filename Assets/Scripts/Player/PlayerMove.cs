@@ -14,6 +14,16 @@ public class PlayerMove : MonoBehaviour
     private float minMovingSpeed = 0.1f; //inputVector ����� ���� ����� ���������, �.� float!
     private bool isRunning = false;
 
+    private void Start()
+    {
+        GameInput.Instance.OnPlayerAttack += Player_OnPlayerAttack; //пишем не в Awake, так как Awake рандомно вызывается
+    }
+
+    private void Player_OnPlayerAttack(object sender, System.EventArgs e)
+    {
+        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+    }
+
     private void Awake() // ����������� �� ������ Start. ���� ������������� ��������
     {
         Instance = this;
