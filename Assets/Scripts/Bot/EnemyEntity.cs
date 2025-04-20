@@ -23,7 +23,7 @@ public class EnemyEntity : MonoBehaviour
         DetectDeath();
     }
 
-    public void DetectDeath()
+    private void DetectDeath()
     {
         if (_currentHealth <= 0)
             Destroy(gameObject);

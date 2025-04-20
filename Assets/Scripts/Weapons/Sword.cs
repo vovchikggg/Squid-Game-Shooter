@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] private int damageAmount = 5;
+    [SerializeField] private int damageAmount;
     
     public event EventHandler OnSwordSwing;
 
@@ -25,6 +25,11 @@ public class Sword : MonoBehaviour
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
         {
             enemyEntity.TakeDamage(damageAmount);
+        }
+        
+        if (collision.transform.TryGetComponent(out Chest chest))
+        {
+            chest.TakeDamage(damageAmount);
         }
     }
 
