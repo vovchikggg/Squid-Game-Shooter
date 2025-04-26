@@ -30,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 1868086673305061119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.73, y: 3.78, z: 0}
-  m_LocalScale: {x: 0.20697147, y: 0.22004497, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -11.44, y: 8.8, z: 0}
+  m_LocalScale: {x: 0.008284642, y: 0.008807948, z: 0.040027946}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -345244531982855090, guid: 87e0acdfa6e6cde419ffb3351ecd4b63, type: 3}
+  m_Sprite: {fileID: 3241083253005352254, guid: 58e96031fe3a0af479867551d5f61a50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 216.75, y: 160.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,7 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   shrinkFactor: 0.7
-  items: []
+  items:
+  - {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
 --- !u!61 &8680225744217696449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,17 +141,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.72924423, y: 0.22862244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.67, y: 6.41}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 216.75, y: 160.25}
+    newSize: {x: 216.75, y: 160.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8.67, y: 6.41}
+  m_Size: {x: 220.1521, y: 162.34293}
   m_EdgeRadius: 0
 --- !u!50 &892750957284105955
 Rigidbody2D:
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedVersion: 0
-  m_Size: {x: 8.631333, y: 6.345543, z: 4}
-  m_Center: {x: -0.0185256, y: -0.010633469, z: 0}
+  m_Size: {x: 219.90646, y: 162.27847, z: 4}
+  m_Center: {x: -0.8512764, y: 0.21800232, z: 0}
   m_Area: 0
   m_AffectedAgents: ffffffff
