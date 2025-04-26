@@ -3,8 +3,8 @@ guid: f8d60ef954d5c8f4b8fc081874fa0055
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8258633412909276546
-    second: b79fedd7fc4a4dc1a6bc7150ada73a5c-Photoroom_0
+      213: 8255015493941704377
+    second: "\u041A\u0443\u043A\u043B\u0430_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,11 +96,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: b79fedd7fc4a4dc1a6bc7150ada73a5c-Photoroom_0
+      name: "\u041A\u0443\u043A\u043B\u0430_0"
       rect:
         serializedVersion: 2
         x: 135
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e72ee55caa0736d80800000000000000
-      internalID: -8258633412909276546
+      spriteID: 9b6bdb3dad4bf8270800000000000000
+      internalID: 8255015493941704377
       vertices: []
       indices: 
       edges: []
@@ -134,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      b79fedd7fc4a4dc1a6bc7150ada73a5c-Photoroom_0: -8258633412909276546
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
