@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class RotateNogProbnic : MonoBehaviour
 {
+    private enum Side
+    {
+        Left = -1,
+        Right = 1
+    }
+
     private Vector2 _one;
     private Vector2 _two;
     private Transform _thisTransform;
@@ -27,8 +33,18 @@ public class RotateNogProbnic : MonoBehaviour
         var scalarComposition = _one.x * _two.x + _one.y * _two.y;
         var modulesComposition = _one.magnitude * _two.magnitude;
         var division = scalarComposition / modulesComposition;
-        var angle = Mathf.Acos(division) * Mathf.Rad2Deg;
+        var angle = Mathf.Acos(division) * Mathf.Rad2Deg * (int)GetSide();
         return angle;
+    }
+
+    private Side GetSide()
+    {
+        var side = Side.Right;
+        if (_two.y <= _one.y)
+        {
+            side = Side.Left;
+        }
+        return side;
     }
     private void OnDrawGizmos()
     {
