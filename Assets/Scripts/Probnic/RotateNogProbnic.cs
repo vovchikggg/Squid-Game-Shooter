@@ -15,6 +15,21 @@ public class RotateNogProbnic : MonoBehaviour
         _thisTransform = transform;
     }
 
+    private void Update()
+    {
+        var z = GetValueZ();
+        _thisTransform.rotation = Quaternion.Euler(0, 0, z);
+    }
+
+    private float GetValueZ()
+    {
+        _two = (_camera.ScreenToWorldPoint(Input.mousePosition) - _thisTransform.position);
+        var scalarComposition = _one.x * _two.x + _one.y * _two.y;
+        var modulesComposition = _one.magnitude * _two.magnitude;
+        var division = scalarComposition / modulesComposition;
+        var angle = Mathf.Acos(division) * Mathf.Rad2Deg;
+        return angle;
+    }
     private void OnDrawGizmos()
     {
         if (_thisTransform != null) 
