@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f8d60ef954d5c8f4b8fc081874fa0055
+guid: 246741415d3d26647b4b3287d9250e14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8255015493941704377
-    second: "\u041A\u0443\u043A\u043B\u0430_0"
+      213: -2797524007982468456
+    second: i-Photoroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u041A\u0443\u043A\u043B\u0430_0"
+      name: i-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 135
-        y: 129
-        width: 430
-        height: 902
+        x: 106
+        y: 165
+        width: 653
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b6bdb3dad4bf8270800000000000000
-      internalID: 8255015493941704377
+      spriteID: 892f3959cb23d29d0800000000000000
+      internalID: -2797524007982468456
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u041A\u0443\u043A\u043B\u0430_0": 8255015493941704377
+      i-Photoroom_0: -2797524007982468456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
