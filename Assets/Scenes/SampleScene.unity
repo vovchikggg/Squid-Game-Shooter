@@ -2610,9 +2610,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -171.249
       objectReference: {fileID: 0}
+    - target: {fileID: 3575181813152879327, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: m_Name
+      value: KnifeVisual
+      objectReference: {fileID: 0}
     - target: {fileID: 7132115487048542755, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_Name
-      value: Sword
+      value: Knife
       objectReference: {fileID: 0}
     - target: {fileID: 7277045962401447359, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -2814,7 +2818,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 263.357
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9101689129578949244, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d8ff85ddea84eb74bad84246cc325397, type: 2}
+    m_RemovedComponents:
+    - {fileID: 9101689129578949244, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
