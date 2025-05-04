@@ -4018,6 +4018,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7712532365675689712, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
   m_PrefabInstance: {fileID: 674769794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1077225721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+  m_PrefabInstance: {fileID: 674769794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b62d63fa732197409088d0f713d72b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1083375236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2116385717256015132, guid: a8ef1a27ee3bb4b4dac4ec7dc0e7a911, type: 3}
@@ -5714,7 +5725,7 @@ PrefabInstance:
     - target: {fileID: 3953434719719193343, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: sword
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1077225721}
     - target: {fileID: 4005858189073394721, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 7

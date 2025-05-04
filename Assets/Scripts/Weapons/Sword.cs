@@ -4,11 +4,14 @@ using UnityEngine.Serialization;
 
 public class Sword : MonoBehaviour
 {
+
     [SerializeField] private int damageAmount;
     
     public event EventHandler OnSwordSwing;
 
     private PolygonCollider2D _polygonCollider2D;
+
+    private bool isAttackKnife = false;
 
     private void Awake()
     {
@@ -18,6 +21,9 @@ public class Sword : MonoBehaviour
     public void Attack()
     {
         OnSwordSwing?.Invoke(this, EventArgs.Empty);
+        //isAttackKnife = true;
+        Debug.Log("Attack");
+
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,5 +47,15 @@ public class Sword : MonoBehaviour
     private void AttackColliderTurnOn()
     {
         _polygonCollider2D.enabled = true;
+    }
+
+    public bool IsAttackKnife()
+    {
+        return isAttackKnife;
+    }
+
+    public void SetAttackKnife(bool _isAttackKnife)
+    {
+        isAttackKnife = _isAttackKnife;
     }
 }
