@@ -5,7 +5,7 @@ public class WithVisual : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private const string IS_RUNNING = "IsRunning";
+    private const string IS_RUN_KNIFE = "IsRunKnife";
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class WithVisual : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool(IS_RUNNING, PlayerMove.Instance.IsRunning());
+        animator.SetBool(IS_RUN_KNIFE, PlayerMove.Instance.IsRunKnife());
         AdjustPlayerFactingDirection();
     }
 

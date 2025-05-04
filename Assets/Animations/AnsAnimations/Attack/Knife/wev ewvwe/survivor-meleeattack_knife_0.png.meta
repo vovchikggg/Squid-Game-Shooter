@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3296cd458baf94d439ed753c29528e42
+guid: 596cb02b7037a3040a4f68f164e698e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2000138924671707206
-    second: 2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0
+      213: -6956397229014206035
+    second: survivor-meleeattack_knife_0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0
+      name: survivor-meleeattack_knife_0_0
       rect:
         serializedVersion: 2
-        x: 408
-        y: 208
-        width: 1184
-        height: 917
+        x: 35
+        y: 110
+        width: 233
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6482d7a31cbe1cb10800000000000000
-      internalID: 2000138924671707206
+      spriteID: da9b818a399e57f90800000000000000
+      internalID: -6956397229014206035
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0: 2000138924671707206
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
