@@ -1,17 +1,23 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ActiveWeapon : MonoBehaviour
 {
     public static ActiveWeapon Instance { get; private set; }
-    [SerializeField]  private Sword sword;
+    [SerializeField] private Weapons activeWeapon;
+    [SerializeField] private Sword sword;
+    [SerializeField] private Gun gun;
 
     private void Awake()
     {
         Instance = this;
     }
-
-    public Sword GetActiveWeapon()
+    
+    public Weapons GetActiveWeapon()
     {
-        return sword;
+        return activeWeapon;
     }
+
+    public Sword GetSword() => sword;
+    public Gun GetGun() => gun;
 }

@@ -21,7 +21,18 @@ public class PlayerMove : MonoBehaviour
 
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
-        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+        var activeWeapon = ActiveWeapon.Instance.GetActiveWeapon();
+        switch (activeWeapon)
+        {
+            case Weapons.Sword:
+                ActiveWeapon.Instance.GetSword().Attack();
+                break;
+            case Weapons.Gun:
+                // ActiveWeapon.Instance.GetGun().Attack();
+                break;
+            default:
+                break;
+        }
     }
 
     private void Awake() // ����������� �� ������ Start. ���� ������������� ��������
