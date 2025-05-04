@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.44, y: 8.8, z: 0}
-  m_LocalScale: {x: 0.008284642, y: 0.008807948, z: 0.040027946}
+  m_LocalScale: {x: 0.016488096, y: 0.017529579, z: 0.07966363}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -145,7 +145,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 216.75, y: 160.25}
+    oldSize: {x: 108.375, y: 80.125}
     newSize: {x: 216.75, y: 160.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
