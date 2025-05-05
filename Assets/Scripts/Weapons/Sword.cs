@@ -48,6 +48,11 @@ public class Sword : MonoBehaviour
         {
             chest.TakeDamage(damageAmount);
         }
+        
+        if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
+        {
+            playerEntity.TakeDamage(damageAmount);
+        }
     }
 
     public void AttackColliderTurnOff()
