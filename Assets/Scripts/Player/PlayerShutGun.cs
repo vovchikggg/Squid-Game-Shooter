@@ -23,6 +23,8 @@ public class PlayerShotGun : MonoBehaviour
     {
         ActiveWeapon.Instance.GetActiveWeapon().Attack();
 
+        Debug.Log("Атакую ножом");
+
         ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(true);
 
     }
