@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2072160114593625864}
   - component: {fileID: 2270974575132677655}
-  - component: {fileID: 9101689129578949244}
   m_Layer: 0
-  m_Name: SwordVisual
+  m_Name: KnifeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575181813152879327}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000004610046, y: 0.000000083819025, z: 0.21025412, w: 0.97764677}
-  m_LocalPosition: {x: -0.6, y: 0.67, z: 0}
-  m_LocalScale: {x: 0.07056621, y: 0.07056621, z: 0.07056621}
+  m_LocalRotation: {x: 0.000000042840824, y: 0.00000020139844, z: -0.99708575, w: 0.07628938}
+  m_LocalPosition: {x: 20.4, y: 177.3, z: 0}
+  m_LocalScale: {x: 0.06158454, y: 0.06158454, z: 0.06158454}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7712532365675689712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.274}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -171.249}
 --- !u!212 &2270974575132677655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,28 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &9101689129578949244
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3575181813152879327}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e872e674749964841ac92ae9c2345b1b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7132115487048542755
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7712532365675689712}
   - component: {fileID: 6228157998630904431}
-  - component: {fileID: 7277045962401447359}
+  - component: {fileID: 4309331190327478776}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -138,7 +115,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.19, y: 3.12, z: 76.5}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_LocalScale: {x: 0.03036224, y: 0.030362247, z: 0.03036224}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2072160114593625864}
@@ -157,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
---- !u!60 &7277045962401447359
+--- !u!60 &4309331190327478776
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +164,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -203,10 +180,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.77528304, y: 1.2565665}
-      - {x: -1.1116228, y: 0.37317115}
-      - {x: -0.8724628, y: -0.056877792}
-      - {x: -0.30011395, y: 0.0644425}
-      - {x: -0.030667752, y: 0.8084878}
-      - {x: -0.24425308, y: 1.411702}
+    - - {x: -52.0588, y: 171.98022}
+      - {x: -14.665574, y: 168.76367}
+      - {x: 86.96135, y: 238.24677}
+      - {x: 78.794716, y: 297.69977}
+      - {x: 40.008232, y: 325.5663}
+      - {x: -7.292249, y: 317.66223}
+      - {x: -47.4599, y: 279.6276}
+      - {x: -57.190212, y: 193.33621}
   m_UseDelaunayMesh: 0

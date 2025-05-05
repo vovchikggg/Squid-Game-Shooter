@@ -26,19 +26,19 @@ public class WithVisual : MonoBehaviour
 
         ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(false);
 
-        AdjustPlayerFactingDirection();
+        //AdjustPlayerFactingDirection();
     }
 
-    private void AdjustPlayerFactingDirection()
-    {
-        var mousePosition = GameInput.Instance.GetMousePosition();
-        var playerPosition = PlayerMove.Instance.GetPlayerScreenPosition();
+    //private void AdjustPlayerFactingDirection()
+    //{
+    //    var mousePosition = GameInput.Instance.GetMousePosition();
+    //    var playerPosition = PlayerMove.Instance.GetPlayerScreenPosition();
 
-        if (mousePosition.x < playerPosition.x)
-            spriteRenderer.flipX = true;
-        else
-            spriteRenderer.flipX = false;
-    }
+    //    if (mousePosition.x < playerPosition.x)
+    //        spriteRenderer.flipX = true;
+    //    else
+    //        spriteRenderer.flipX = false;
+    //}
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
