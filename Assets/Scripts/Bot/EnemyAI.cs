@@ -67,7 +67,7 @@ public class Bot : MonoBehaviour
 
     private void ChasingTarget()
     {
-        navMeshAgent.SetDestination(PlayerMove.Instance.transform.position);
+        navMeshAgent.SetDestination(PlayerShotGun.Instance.transform.position);
     }
 
     private Vector3 GetRoamingPosition()
