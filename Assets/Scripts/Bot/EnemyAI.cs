@@ -1,77 +1,54 @@
-using System;
 using UnityEngine;
-using UnityEngine.AI;
-using SquidGameShooter.Utils;
 
-public class Bot : MonoBehaviour
+public class BotAI : MonoBehaviour
 {
-    [SerializeField] private State startingState;
-    [SerializeField] private float roamingDistanceMax = 7f;
-    [SerializeField] private float roamingDistanceMin = 3f;
-    [SerializeField] private float roamingTimerMax = 7f;
+    public float speed = 3f;  // Скорость движения бота
+    public float stoppingDistance = 1f; // Расстояние, на котором бот останавливается перед игроком
+    public Transform target; // Ссылка на объект игрока (перетащите игрока в это поле в инспекторе)
 
-    private NavMeshAgent navMeshAgent;
-    private State state;
-    private float roamingTime;
-    private Vector3 roamingPosition;
-    private Vector3 startingPosition;
-    
-    private enum State
-    {
-        Idle,
-        Roaming,
-        Chasing,
-        Attacking,
-        Death
-    }
+    private Rigidbody2D rb;
 
-    private void Awake()
+    void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.updateRotation = false;
-        navMeshAgent.updateUpAxis = false;
-        state = startingState;
-    }
+        rb = GetComponent<Rigidbody2D>();
 
-    private void FixedUpdate()
-    {
-        switch (state)
+        // Если цель не назначена, попытаться найти игрока по тегу "Player"
+        if (target == null)
         {
-            case State.Roaming:
-                roamingTime -= Time.deltaTime;
-                if (roamingTime < 0)
-                {
-                    Roaming();
-                    roamingTime = roamingTimerMax;
-                }
-                break;
-            case State.Chasing:
-                ChasingTarget();
-                break;
-            case State.Attacking:
-                break;
-            case State.Death:
-                break;
-            default:
-            case State.Idle:
-                break;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                target = player.transform;
+            }
+            else
+            {
+                Debug.LogError("Нет объекта игрока с тегом 'Player'!");
+                enabled = false; // Отключаем скрипт, чтобы избежать ошибок
+            }
         }
     }
 
-    private void Roaming()
-    {
-        startingPosition = transform.position;
-        roamingPosition = GetRoamingPosition();
-        navMeshAgent.SetDestination(roamingPosition);
+    void FixedUpdate()
+    {   
+        if (target != null)
+        {
+            // Вычисляем направление к игроку
+            Vector2 direction = target.position - transform.position;
+            float distance = direction.magnitude;
+            direction.Normalize();  // Нормализуем вектор для получения направления
+
+            // Двигаемся к игроку, если расстояние больше, чем stoppingDistance
+            if (distance > stoppingDistance)
+            {
+                rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+            }
+        }
     }
 
-    private void ChasingTarget()
+    // Рисуем Gizmo, чтобы видеть stoppingDistance в редакторе
+    void OnDrawGizmosSelected()
     {
-        navMeshAgent.SetDestination(PlayerMove.Instance.transform.position);
-    }
-
-    private Vector3 GetRoamingPosition()
-    {
-        return startingPosition + Utils.GetRandomDir() * UnityEngine.Random.Range(roamingDistanceMin, roamingDistanceMax);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
     }
 }
