@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     private float minMovingSpeed = 0.1f; //inputVector ����� ���� ����� ���������, �.� float!
-    private bool isRunning = false;
+    private bool isRunKnife = false;
 
     private void Start()
     {
@@ -21,18 +21,10 @@ public class PlayerMove : MonoBehaviour
 
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
-        var activeWeapon = ActiveWeapon.Instance.GetActiveWeapon();
-        switch (activeWeapon)
-        {
-            case Weapons.Sword:
-                ActiveWeapon.Instance.GetSword().Attack();
-                break;
-            case Weapons.Gun:
-                // ActiveWeapon.Instance.GetGun().Attack();
-                break;
-            default:
-                break;
-        }
+        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(true);
+
     }
 
     private void Awake() // ����������� �� ������ Start. ���� ������������� ��������
@@ -59,9 +51,9 @@ public class PlayerMove : MonoBehaviour
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime)); //��������� � fixedDeltaTime,
                                                                                           // �� ��������� n �/� ������� �� ����� ����
         if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
-            isRunning = true;
+            isRunKnife = true;
         else
-            isRunning = false;
+            isRunKnife = false;
     }
 
     public Vector3 GetPlayerScreenPosition()
@@ -70,8 +62,8 @@ public class PlayerMove : MonoBehaviour
         return playerScreenPosition;
     }
 
-    public bool IsRunning()
+    public bool IsRunKnife()
     {
-        return isRunning;
+        return isRunKnife;
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 246741415d3d26647b4b3287d9250e14
+guid: 277596655b4e954408c8c11d9860ffd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2797524007982468456
-    second: i-Photoroom_0
+      213: 982085184632511447
+    second: survivor-idle_knife_5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: i-Photoroom_0
+      name: survivor-idle_knife_5_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 165
-        width: 653
-        height: 410
+        x: 37
+        y: 33
+        width: 235
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 892f3959cb23d29d0800000000000000
-      internalID: -2797524007982468456
+      spriteID: 7dbd139a54111ad00800000000000000
+      internalID: 982085184632511447
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      i-Photoroom_0: -2797524007982468456
+      survivor-idle_knife_5_0: 982085184632511447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

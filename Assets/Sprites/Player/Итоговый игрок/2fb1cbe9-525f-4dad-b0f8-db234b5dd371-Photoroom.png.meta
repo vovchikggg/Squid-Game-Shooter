@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 246741415d3d26647b4b3287d9250e14
+guid: 3296cd458baf94d439ed753c29528e42
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2797524007982468456
-    second: i-Photoroom_0
+      213: 2000138924671707206
+    second: 2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: i-Photoroom_0
+      name: 2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 165
-        width: 653
-        height: 410
+        x: 408
+        y: 208
+        width: 1184
+        height: 917
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 892f3959cb23d29d0800000000000000
-      internalID: -2797524007982468456
+      spriteID: 6482d7a31cbe1cb10800000000000000
+      internalID: 2000138924671707206
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      i-Photoroom_0: -2797524007982468456
+      2fb1cbe9-525f-4dad-b0f8-db234b5dd371-Photoroom_0: 2000138924671707206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
