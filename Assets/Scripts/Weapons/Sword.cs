@@ -21,12 +21,18 @@ public class Sword : MonoBehaviour
     private void Start()
     {
         //AttackColliderTurnOff();
-
     }
+
+    //public void Update()
+    //{
+    //    AttackColliderTurnOff();
+    //}
 
     public void Attack()
     {
-        AttackColliderTurnOff();
+        //AttackColliderTurnOff();
+        //_polygonCollider2D.enabled = false;
+        Debug.Log("Pressedasdvaw");
 
         //OnSwordSwing?.Invoke(this, EventArgs.Empty);
     }
