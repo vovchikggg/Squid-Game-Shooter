@@ -28,7 +28,7 @@ public class PlayerShotGun : MonoBehaviour
     {
         Attack();
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
+        //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
 
     }
 

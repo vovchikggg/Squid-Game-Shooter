@@ -23,7 +23,7 @@ public class PlayerKnife : MonoBehaviour
     {
         Attack();
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
+        //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
 
     }
 
@@ -38,13 +38,20 @@ public class PlayerKnife : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
+
+        if (Input.GetMouseButton(0)) // 0 - левая кнопка мыши
+        {
+            ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
+        }
+        else
+        {
+            ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false);
+        }
     }
 
     public void Attack()
     {
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false);
 
         // Здесь вкл/выкл коллайдер у ножа
     }

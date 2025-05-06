@@ -43,16 +43,9 @@ public class PlayerVisualKnife : MonoBehaviour
 
     public void animationAttack()
     {
-        if (ActiveWeapon.Instance.GetActiveWeapon().IsAttack())
-        {
-            animator.SetBool(IS_ATTACK_KNIFE, true);
-        }
-        else
-        {
-            animator.SetBool(IS_ATTACK_KNIFE, false);
-        }
+        animator.SetBool(IS_ATTACK_KNIFE, ActiveWeapon.Instance.GetActiveWeapon().IsAttack());
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
+        //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
