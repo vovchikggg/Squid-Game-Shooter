@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerVisualKnife : MonoBehaviour
 {
+    public static PlayerVisualKnife Instance { get; private set; }
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -17,14 +19,8 @@ public class PlayerVisualKnife : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool(IS_RUN_KNIFE, PlayerShotGun.Instance.IsRun());
-
-        if (ActiveWeapon.Instance.GetActiveWeapon().IsAttackKnife())
-        {
-            animator.SetTrigger(IS_ATTACK_KNIFE);
-        }
-
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(false);
+        animationRun();
+        animationAttack();
 
         //AdjustPlayerFactingDirection();
     }
@@ -39,6 +35,25 @@ public class PlayerVisualKnife : MonoBehaviour
     //    else
     //        spriteRenderer.flipX = false;
     //}
+
+    public void animationRun()
+    {
+        animator.SetBool(IS_RUN_KNIFE, PlayerKnife.Instance.IsRun());
+    }
+
+    public void animationAttack()
+    {
+        if (ActiveWeapon.Instance.GetActiveWeapon().IsAttack())
+        {
+            animator.SetBool(IS_ATTACK_KNIFE, true);
+        }
+        else
+        {
+            animator.SetBool(IS_ATTACK_KNIFE, false);
+        }
+
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
+    }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {

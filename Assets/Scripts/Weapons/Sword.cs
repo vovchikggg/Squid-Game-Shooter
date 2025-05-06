@@ -28,15 +28,17 @@ public class Sword : MonoBehaviour
     //    AttackColliderTurnOff();
     //}
 
-    public void Attack()
-    {
-        //AttackColliderTurnOff();
-        //_polygonCollider2D.enabled = false;
-        Debug.Log("Pressedasdvaw");
 
-        //OnSwordSwing?.Invoke(this, EventArgs.Empty);
-    }
-    
+    //public void Attack()
+    //{
+    //    //AttackColliderTurnOff();
+    //    //_polygonCollider2D.enabled = false;
+    //    Debug.Log("Pressedasdvaw");
+
+    //    //OnSwordSwing?.Invoke(this, EventArgs.Empty);
+    //}
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
@@ -60,12 +62,12 @@ public class Sword : MonoBehaviour
         _polygonCollider2D.enabled = true;
     }
 
-    public bool IsAttackKnife()
+    public bool IsAttack()
     {
         return isAttackKnife;
     }
 
-    public void SetAttackKnife(bool _isAttackKnife)
+    public void SetAttack(bool _isAttackKnife)
     {
         isAttackKnife = _isAttackKnife;
     }

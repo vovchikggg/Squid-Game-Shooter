@@ -19,11 +19,16 @@ public class PlayerShotGun : MonoBehaviour
         GameInput.Instance.OnPlayerAttack += Player_OnPlayerAttack; //пишем не в Awake, так как Awake рандомно вызывается
     }
 
+    public void Attack()
+    {
+        // пока хз для чего
+    }
+
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
-        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+        Attack();
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(true);
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
 
     }
 

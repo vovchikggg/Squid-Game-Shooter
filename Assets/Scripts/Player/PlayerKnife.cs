@@ -21,9 +21,9 @@ public class PlayerKnife : MonoBehaviour
 
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
-        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+        Attack();
 
-        ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(true);
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
 
     }
 
@@ -40,6 +40,15 @@ public class PlayerKnife : MonoBehaviour
         HandleMovement();
     }
 
+    public void Attack()
+    {
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
+
+        ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false);
+
+        // Здесь вкл/выкл коллайдер у ножа
+    }
+
     private void HandleMovement()
     {
         var inputVector = GameInput.Instance.GetMovementVector();
@@ -47,7 +56,7 @@ public class PlayerKnife : MonoBehaviour
         inputVector = inputVector.normalized;
 
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
-        // �� ��������� n �/� ������� �� ����� ����
+
         if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
             isRun = true;
         else
