@@ -3,14 +3,14 @@ using UnityEngine;
 public class ActiveWeapon : MonoBehaviour
 {
     public static ActiveWeapon Instance { get; private set; }
-    [SerializeField] private Sword sword;
+    [SerializeField] private Knife sword;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public Sword GetActiveWeapon()
+    public Knife GetActiveWeapon()
     {
         return sword;
     }

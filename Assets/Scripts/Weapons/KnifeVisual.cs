@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class SwordVisual : MonoBehaviour
+public class KnifeVisual : MonoBehaviour //пока класс нигде не исп
 {
-    [SerializeField] private Sword sword;
+    [SerializeField] private Knife sword;
 
     private Animator animator;
 

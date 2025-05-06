@@ -43,7 +43,7 @@ public class PlayerVisualKnife : MonoBehaviour
 
     public void animationAttack()
     {
-        animator.SetBool(IS_ATTACK_KNIFE, ActiveWeapon.Instance.GetActiveWeapon().IsAttack());
+        animator.SetBool(IS_ATTACK_KNIFE, PlayerKnife.Instance.Knife.IsAttack());
 
         //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
     }

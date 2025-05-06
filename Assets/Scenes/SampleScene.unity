@@ -362,7 +362,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136787359}
-  - component: {fileID: 136787360}
   m_Layer: 0
   m_Name: ActiveWeapon
   m_TagString: Untagged
@@ -387,19 +386,6 @@ Transform:
   - {fileID: 573030775}
   m_Father: {fileID: 1307677727}
   m_LocalEulerAnglesHint: {x: 0.784, y: 2.62, z: -4.317}
---- !u!114 &136787360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136787358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63bdc24558fdd1439de57657d93830a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sword: {fileID: 1783718919}
 --- !u!1 &147294326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bd510c6a50d5648b8ee93707b67689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Knife: {fileID: 1783718919}
   movingSpeed: 5
 --- !u!1 &1199391945
 GameObject:
@@ -2265,15 +2252,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -52.0588, y: 171.98022}
-      - {x: -14.665574, y: 168.76367}
+    - - {x: -11.409475, y: 247.64609}
+      - {x: -11.103841, y: 235.9473}
       - {x: 86.96135, y: 238.24677}
       - {x: 113.18593, y: 264.71875}
       - {x: 102.64962, y: 311.47324}
       - {x: 45.324303, y: 336.0643}
       - {x: 0.33937883, y: 328.56934}
-      - {x: -66.14017, y: 290.66702}
-      - {x: -57.190212, y: 193.33621}
+      - {x: -14.477254, y: 309.43875}
+      - {x: -12.190953, y: 255.30319}
   m_UseDelaunayMesh: 0
 --- !u!114 &1783718919
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int _currentHealth;
     [SerializeField] private float shrinkFactor;
-    [SerializeField] private List<Sword> items;
+    [SerializeField] private List<Knife> items;
     
     private void Start()
     {

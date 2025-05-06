@@ -5,6 +5,8 @@ public class PlayerKnife : MonoBehaviour
 {
     public static PlayerKnife Instance { get; private set; }
 
+    [SerializeField] public Knife Knife;
+
     [SerializeField] private float movingSpeed = 5f;
 
     private Rigidbody2D rb;
@@ -41,19 +43,17 @@ public class PlayerKnife : MonoBehaviour
 
         if (Input.GetMouseButton(0)) // 0 - левая кнопка мыши
         {
-            ActiveWeapon.Instance.GetActiveWeapon().SetAttack(true);
+            Knife.SetAttack(true);
         }
         else
         {
-            ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false);
+            Knife.SetAttack(false);
         }
     }
 
     public void Attack()
     {
 
-
-        // Здесь вкл/выкл коллайдер у ножа
     }
 
     private void HandleMovement()
