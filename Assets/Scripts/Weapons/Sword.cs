@@ -20,13 +20,20 @@ public class Sword : MonoBehaviour
 
     private void Start()
     {
-        //AttackColliderTurnOff();
+        AttackColliderTurnOff();
     }
 
-    //public void Update()
-    //{
-    //    AttackColliderTurnOff();
-    //}
+    public void FixedUpdate()
+    {
+        if (isAttackKnife)
+        {
+            AttackColliderTurnOn();
+        }
+        else
+        {
+            AttackColliderTurnOff();
+        }
+    }
 
 
     //public void Attack()
