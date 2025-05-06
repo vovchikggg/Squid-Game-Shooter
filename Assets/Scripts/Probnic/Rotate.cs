@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotatePlayer : MonoBehaviour
+public class Rotate : MonoBehaviour
 {
     private enum Side
     {

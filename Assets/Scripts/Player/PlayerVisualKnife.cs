@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WithVisual : MonoBehaviour
+public class PlayerVisualKnife : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private Animator animator;

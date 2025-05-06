@@ -12,7 +12,7 @@ public class PlayerKnife : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     private float minMovingSpeed = 0.1f;
-    private bool isRunKnife = false;
+    private bool isRun = false;
 
     private void Start()
     {
@@ -49,9 +49,9 @@ public class PlayerKnife : MonoBehaviour
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
         // �� ��������� n �/� ������� �� ����� ����
         if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
-            isRunKnife = true;
+            isRun = true;
         else
-            isRunKnife = false;
+            isRun = false;
     }
 
     public Vector3 GetPlayerScreenPosition()
@@ -60,8 +60,8 @@ public class PlayerKnife : MonoBehaviour
         return playerScreenPosition;
     }
 
-    public bool IsRunKnife()
+    public bool IsRun()
     {
-        return isRunKnife;
+        return isRun;
     }
 }
