@@ -12,7 +12,7 @@ public class PlayerShotGun : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     private float minMovingSpeed = 0.1f;
-    private bool isRunKnife = false;
+    private bool isRun = false;
 
     private void Start()
     {
@@ -22,8 +22,6 @@ public class PlayerShotGun : MonoBehaviour
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
         ActiveWeapon.Instance.GetActiveWeapon().Attack();
-
-        Debug.Log("Атакую ножом");
 
         ActiveWeapon.Instance.GetActiveWeapon().SetAttackKnife(true);
 
@@ -51,9 +49,9 @@ public class PlayerShotGun : MonoBehaviour
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
                                                                                           // �� ��������� n �/� ������� �� ����� ����
         if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
-            isRunKnife = true;
+            isRun = true;
         else
-            isRunKnife = false;
+            isRun = false;
     }
 
     public Vector3 GetPlayerScreenPosition()
@@ -62,8 +60,8 @@ public class PlayerShotGun : MonoBehaviour
         return playerScreenPosition;
     }
 
-    public bool IsRunKnife()
+    public bool IsRun()
     {
-        return isRunKnife;
+        return isRun;
     }
 }

@@ -17,7 +17,7 @@ public class WithVisual : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool(IS_RUN_KNIFE, PlayerShotGun.Instance.IsRunKnife());
+        animator.SetBool(IS_RUN_KNIFE, PlayerShotGun.Instance.IsRun());
 
         if (ActiveWeapon.Instance.GetActiveWeapon().IsAttackKnife())
         {
