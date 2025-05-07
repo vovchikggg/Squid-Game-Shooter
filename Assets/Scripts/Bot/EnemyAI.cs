@@ -9,6 +9,7 @@ public class Bot : MonoBehaviour
     [SerializeField] private float roamingDistanceMax = 7f;
     [SerializeField] private float roamingDistanceMin = 3f;
     [SerializeField] private float roamingTimerMax = 7f;
+    [SerializeField] public Knife Knife;
 
     private NavMeshAgent navMeshAgent;
     private State state;
@@ -23,6 +24,11 @@ public class Bot : MonoBehaviour
         Chasing,
         Attacking,
         Death
+    }
+
+    private void Start()
+    {
+        Knife.SetAttack(true);
     }
 
     private void Awake()
