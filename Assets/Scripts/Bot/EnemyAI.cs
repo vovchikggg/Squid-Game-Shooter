@@ -1,83 +1,56 @@
-using System;
 using UnityEngine;
-using UnityEngine.AI;
-using SquidGameShooter.Utils;
 
-public class Bot : MonoBehaviour
+public class BotAI : MonoBehaviour
 {
-    [SerializeField] private State startingState;
-    [SerializeField] private float roamingDistanceMax = 7f;
-    [SerializeField] private float roamingDistanceMin = 3f;
-    [SerializeField] private float roamingTimerMax = 7f;
     [SerializeField] public Knife Knife;
+    public float speed = 3f;  // �������� �������� ����
+    public float stoppingDistance = 1f; // ����������, �� ������� ��� ��������������� ����� �������
+    public Transform target; // ������ �� ������ ������ (���������� ������ � ��� ���� � ����������)
 
-    private NavMeshAgent navMeshAgent;
-    private State state;
-    private float roamingTime;
-    private Vector3 roamingPosition;
-    private Vector3 startingPosition;
+    private Rigidbody2D rb;
     
-    private enum State
+    void Start()
     {
-        Idle,
-        Roaming,
-        Chasing,
-        Attacking,
-        Death
-    }
-
-    private void Start()
-    {
+        rb = GetComponent<Rigidbody2D>();
+        
         Knife.SetAttack(true);
-    }
-
-    private void Awake()
-    {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.updateRotation = false;
-        navMeshAgent.updateUpAxis = false;
-        state = startingState;
-    }
-
-    private void FixedUpdate()
-    {
-        switch (state)
+        
+        // ���� ���� �� ���������, ���������� ����� ������ �� ���� "Player"
+        if (target == null)
         {
-            case State.Roaming:
-                roamingTime -= Time.deltaTime;
-                if (roamingTime < 0)
-                {
-                    Roaming();
-                    roamingTime = roamingTimerMax;
-                }
-                break;
-            case State.Chasing:
-                ChasingTarget();
-                break;
-            case State.Attacking:
-                break;
-            case State.Death:
-                break;
-            default:
-            case State.Idle:
-                break;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                target = player.transform;
+            }
+            else
+            {
+                Debug.LogError("��� ������� ������ � ����� 'Player'!");
+                enabled = false; // ��������� ������, ����� �������� ������
+            }
         }
     }
 
-    private void Roaming()
-    {
-        startingPosition = transform.position;
-        roamingPosition = GetRoamingPosition();
-        navMeshAgent.SetDestination(roamingPosition);
-    }
+    void FixedUpdate()
+    {   
+        if (target != null)
+        {
+            // ��������� ����������� � ������
+            Vector2 direction = target.position - transform.position;
+            var distance = direction.magnitude;
+            direction.Normalize();  // ����������� ������ ��� ��������� �����������
 
-    private void ChasingTarget()
-    {
-        navMeshAgent.SetDestination(PlayerShotGun.Instance.transform.position);
+            // ��������� � ������, ���� ���������� ������, ��� stoppingDistance
+            if (distance > stoppingDistance)
+            {
+                rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+            }
+        }
     }
-
-    private Vector3 GetRoamingPosition()
+    
+    void OnDrawGizmosSelected()
     {
-        return startingPosition + Utils.GetRandomDir() * UnityEngine.Random.Range(roamingDistanceMin, roamingDistanceMax);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
     }
 }
