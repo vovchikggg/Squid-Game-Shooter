@@ -26,6 +26,11 @@ public class EnemyEntity : MonoBehaviour
     private void DetectDeath()
     {
         if (_currentHealth <= 0)
+        {
+            GameManager.Instance.botCount--;
+            if (GameManager.Instance.botCount == 0)
+                GameManager.Instance.GameOver();
             Destroy(gameObject);
+        }
     }
 }
