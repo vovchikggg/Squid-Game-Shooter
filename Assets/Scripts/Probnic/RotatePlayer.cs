@@ -21,7 +21,7 @@ public class RotatePlayer : MonoBehaviour
         _thisTransform = transform;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         var z = GetValueZ();
         _thisTransform.rotation = Quaternion.Euler(0, 0, z);
