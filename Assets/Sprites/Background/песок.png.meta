@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1f7b6cd0065d8840b4f834d76deedc3
+guid: abcf47af48fbfb14eb83c4e792cf7c5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7995212898782792397
-    second: Gemini_Generated_Image_lskkszlskkszlskk_0
+      213: -2030619243410705383
+    second: 3F3F%3F_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_lskkszlskkszlskk_0
+      name: 3F3F%3F_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 2048
+        width: 461
+        height: 349
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3353e60aa3c4b0190800000000000000
-      internalID: -7995212898782792397
+      spriteID: 914be6a8e8ac1d3e0800000000000000
+      internalID: -2030619243410705383
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3F3F%3F_0: -2030619243410705383
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
