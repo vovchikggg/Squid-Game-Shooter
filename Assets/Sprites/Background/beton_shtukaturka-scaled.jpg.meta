@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6cba9fd55cb4c1b4eac037a6a6d3d7c4
+guid: 58dfe938c962b6443b5bb102576d7516
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8427860237896154161
-    second: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
+      213: -8530425547510469242
+    second: beton_shtukaturka-scaled_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
+      name: beton_shtukaturka-scaled_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 299
-        height: 649
+        width: 2560
+        height: 2215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc38f8f24c93a0b80800000000000000
-      internalID: -8427860237896154161
+      spriteID: 68da8b12927dd9980800000000000000
+      internalID: -8530425547510469242
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\u0421\u043D\u0438\u043C\u043E\u043A_0": -8427860237896154161
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
