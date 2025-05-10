@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class PlayerVisualKnife : MonoBehaviour
+public class PlayerVisualShotGun : MonoBehaviour
 {
-    public static PlayerVisualKnife Instance { get; private set; }
+    public static PlayerVisualShotGun Instance { get; private set; }
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    [SerializeField] private Knife knife;
 
-    private const string IS_RUN_KNIFE = "IsRunKnife";
+    private const string IS_RUN_SHOT_GUN = "IsRunShotGun";
 
-    private const string IS_ATTACK_KNIFE = "IsAttackKnife";
+    private const string IS_FIRE_SHOT_GUN = "IsFireShotGun";
 
     private void Awake()
     {
@@ -21,7 +20,7 @@ public class PlayerVisualKnife : MonoBehaviour
     private void Update()
     {
         animationRun();
-        animationAttack();
+        animationFire();
 
         //AdjustPlayerFactingDirection();
     }
@@ -39,18 +38,16 @@ public class PlayerVisualKnife : MonoBehaviour
 
     public void animationRun()
     {
-        animator.SetBool(IS_RUN_KNIFE, PlayerKnife.Instance.IsRun());
+        animator.SetBool(IS_RUN_SHOT_GUN, PlayerShotGun.Instance.IsRun());
     }
 
-    public void animationAttack()
+    public void animationFire()
     {
-        animator.SetBool(IS_ATTACK_KNIFE, PlayerKnife.Instance.Knife.GetAttack());
-
-        knife.SetAnimationAttackKnife();
+        animator.SetBool(IS_FIRE_SHOT_GUN, PlayerShotGun.Instance.ShotGun.GetFire());
 
         //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))

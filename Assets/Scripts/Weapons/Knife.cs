@@ -6,16 +6,21 @@ public class Knife : MonoBehaviour
 {
 
     [SerializeField] private int damageAmount;
-    
+
+    private string IS_ATTACK_KNIFE = "IsAttackKnife";
+
     //public event EventHandler OnSwordSwing;
 
     private PolygonCollider2D _polygonCollider2D;
 
     private bool isAttackKnife = false;
 
+    private Animator animator;
+
     private void Awake()
     {
         _polygonCollider2D = GetComponent<PolygonCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -33,6 +38,11 @@ public class Knife : MonoBehaviour
         {
             AttackColliderTurnOff();
         }
+    }
+
+    public void SetAnimationAttackKnife()
+    {
+        animator.SetBool(IS_ATTACK_KNIFE, isAttackKnife);
     }
 
 
@@ -69,7 +79,7 @@ public class Knife : MonoBehaviour
         _polygonCollider2D.enabled = true;
     }
 
-    public bool IsAttack()
+    public bool GetAttack()
     {
         return isAttackKnife;
     }

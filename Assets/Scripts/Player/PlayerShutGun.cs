@@ -5,6 +5,8 @@ public class PlayerShotGun : MonoBehaviour
 {
     public static PlayerShotGun Instance { get; private set; }
 
+    [SerializeField] public ShotGun ShotGun;
+
     [SerializeField] private float movingSpeed = 5f;
 
     private Rigidbody2D rb;
@@ -17,11 +19,6 @@ public class PlayerShotGun : MonoBehaviour
     private void Start()
     {
         GameInput.Instance.OnPlayerAttack += Player_OnPlayerAttack; //пишем не в Awake, так как Awake рандомно вызывается
-    }
-
-    public void Attack()
-    {
-        // пока хз для чего
     }
 
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
@@ -40,9 +37,23 @@ public class PlayerShotGun : MonoBehaviour
         playerInputActions.Enable();
     }
 
-    private void FixedUpdate()              
+    private void FixedUpdate()
     {
         HandleMovement();
+
+        if (Input.GetMouseButton(0)) // 0 - левая кнопка мыши
+        {
+            ShotGun.SetFire(true);
+        }
+        else
+        {
+            ShotGun.SetFire(false);
+        }
+    }
+
+    public void Attack()
+    {
+
     }
 
     private void HandleMovement()
@@ -52,7 +63,7 @@ public class PlayerShotGun : MonoBehaviour
         inputVector = inputVector.normalized;
 
         rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
-                                                                                          // �� ��������� n �/� ������� �� ����� ����
+
         if (Math.Abs(inputVector.x) > minMovingSpeed || Math.Abs(inputVector.y) > minMovingSpeed)
             isRun = true;
         else
