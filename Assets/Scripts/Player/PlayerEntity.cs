@@ -23,7 +23,7 @@ public class PlayerEntity : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            // GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver();
             Destroy(gameObject);
         }
     }

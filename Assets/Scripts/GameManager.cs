@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -6,21 +8,44 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameObject panelSettings;
+	[SerializeField] private TextMeshProUGUI textScore;
 
+	[Header("Settings")]
+    [SerializeField] private int botCount;
+	public int score;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    
     private void Start()
     {
         if (panelSettings)
             panelSettings.SetActive(false);
     }
 
+	public void UpdateScore()
+	{
+        if (textScore)
+		    textScore.text = $"Score: {score}";
+        if (score >= botCount)
+            GameOver();
+	}
+
     public void Play()
     {
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Game");
+    }
+    
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Restart Menu");
     }
 
     public void Back()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void Settings()
@@ -39,17 +64,4 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    // private void Awake()
-    // {
-    //     Instance = this;
-    //     gameOverUI.SetActive(false);
-    // }
-    //
-    // public void GameOver()
-    // {
-    //     Camera.main.orthographicSize = 25f;
-    //     Time.timeScale = 0f; // Останавливаем игру
-    //     gameOverUI.SetActive(true);
-    // }
 }
