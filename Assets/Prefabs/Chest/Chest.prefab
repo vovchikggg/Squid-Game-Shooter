@@ -107,6 +107,7 @@ MonoBehaviour:
   shrinkFactor: 0.7
   items:
   - {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+  - {fileID: 572049081940635945, guid: 3b27bb74b267e904eac7bb049cc9ba1a, type: 3}
 --- !u!61 &8680225744217696449
 BoxCollider2D:
   m_ObjectHideFlags: 0

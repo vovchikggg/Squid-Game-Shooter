@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Knife : MonoBehaviour
+public class Knife : Item
 {
 
     [SerializeField] private int damageAmount;

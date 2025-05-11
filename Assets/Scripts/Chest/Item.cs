@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public class Item
+public class Item : MonoBehaviour
 {
 }
