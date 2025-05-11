@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         if (textScore)
 		    textScore.text = $"Score: {score}";
         if (score >= botCount)
-            GameOver();
+            LoadWinScreen();
 	}
 
     public void Play()
@@ -38,9 +38,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
     
-    public void GameOver()
+    public void LoadWinScreen()
     {
-        SceneManager.LoadScene("Restart Menu");
+        SceneManager.LoadScene("Win Screen");
+    }
+    
+    public void LoadLossScreen()
+    {
+        SceneManager.LoadScene("Loss Screen");
     }
 
     public void Back()
