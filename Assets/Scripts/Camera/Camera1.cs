@@ -9,6 +9,11 @@ public class Camera1 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    private void FixedUpdate()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void LateUpdate()
     {
         Vector3 temp = transform.position; //Важен именно Vector3, а не Vector2
