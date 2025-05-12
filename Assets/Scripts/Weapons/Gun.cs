@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : Item
 {
     public GameObject bullet;
     public Transform shotPoint;

@@ -22,6 +22,9 @@ public class PlayerEntity : MonoBehaviour
     private void DetectDeath()
     {
         if (currentHealth <= 0)
+        {
+            GameManager.Instance.LoadLossScreen();
             Destroy(gameObject);
+        }
     }
 }

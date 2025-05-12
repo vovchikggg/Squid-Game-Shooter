@@ -3,10 +3,21 @@ using UnityEngine;
 public class Camera1 : MonoBehaviour
 {
     private Transform player;
+    private Transform gameOverUI;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        var playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj)
+        {
+            player = playerObj.transform;
+        }
+        
+        var gameOverUIObj = GameObject.FindGameObjectWithTag("GameOverUI");
+        if (gameOverUIObj)
+        {
+            gameOverUI = gameOverUIObj.transform;
+        }
     }
 
     private void FixedUpdate()
@@ -16,10 +27,23 @@ public class Camera1 : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 temp = transform.position; //Важен именно Vector3, а не Vector2
-        temp.x = player.position.x;
-        temp.y = player.position.y;
+        if (player)
+        {
+            var temp = transform.position;
+            temp.x = player.position.x;
+            temp.y = player.position.y;
+            transform.position = temp;
+            return;
+        }
 
-        transform.position = temp;
+        if (gameOverUI)
+        {
+            var temp = transform.position;
+            temp.x = gameOverUI.position.x;
+            temp.y = gameOverUI.position.y;
+            transform.position = temp;
+            
+            Camera.main.orthographicSize = 25f;
+        }
     }
 }

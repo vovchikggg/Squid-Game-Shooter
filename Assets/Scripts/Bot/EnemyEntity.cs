@@ -26,6 +26,10 @@ public class EnemyEntity : MonoBehaviour
     private void DetectDeath()
     {
         if (_currentHealth <= 0)
+        {
             Destroy(gameObject);
+            GameManager.Instance.score++;
+            GameManager.Instance.UpdateScore();
+        }
     }
 }

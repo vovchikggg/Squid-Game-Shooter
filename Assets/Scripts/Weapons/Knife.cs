@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Knife : MonoBehaviour
+public class Knife : Item
 {
 
     [SerializeField] private int damageAmount;
@@ -66,6 +66,11 @@ public class Knife : MonoBehaviour
         if (collision.transform.TryGetComponent(out Chest chest))
         {
             chest.TakeDamage(damageAmount);
+        }
+        
+        if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
+        {
+            playerEntity.TakeDamage(damageAmount);
         }
     }
 
