@@ -6,7 +6,7 @@ public class BotAI : MonoBehaviour
     public float speed = 3f;  // �������� �������� ����
     public float stoppingDistance = 1f; // ����������, �� ������� ��� ��������������� ����� �������
     public Transform target; // ������ �� ������ ������ (���������� ������ � ��� ���� � ����������)
-
+    public bool playerInSight;
     private Rigidbody2D rb;
     
     void Start()
@@ -30,10 +30,28 @@ public class BotAI : MonoBehaviour
             }
         }
     }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInSight = true;
+            Debug.Log("Player In Sight!!!!!");
+        }
+    }
+
+    // Вызывается, когда коллайдер (с триггером) выходит из триггерного коллайдера этого объекта
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInSight = false;
+        }
+    }
 
     void FixedUpdate()
     {   
-        if (target != null)
+        if (target != null && playerInSight)
         {
             // ��������� ����������� � ������
             Vector2 direction = target.position - transform.position;
