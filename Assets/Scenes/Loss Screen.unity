@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1432169934}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 136780141}
   - component: {fileID: 136780140}
   m_Layer: 5
-  m_Name: PanelSettings
+  m_Name: SettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,8 +841,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1426328914484896b00d3c53a5c478d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelSettings: {fileID: 136780139}
+  menuPanel: {fileID: 2040299062}
+  settingsPanel: {fileID: 136780139}
   textScore: {fileID: 0}
+  menuIsStatic: 1
   botCount: 0
   score: 0
 --- !u!4 &1432169935
@@ -1050,7 +1052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u044B\u0439\u0442\u0438"
+  m_text: "\u0412 \u043C\u0435\u043D\u044E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1639,7 +1641,7 @@ GameObject:
   - component: {fileID: 1770454442}
   - component: {fileID: 1770454441}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1813,6 +1815,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1645016618}
-  - {fileID: 1402735484}
   - {fileID: 1770454440}
+  - {fileID: 1402735484}
   - {fileID: 1432169935}

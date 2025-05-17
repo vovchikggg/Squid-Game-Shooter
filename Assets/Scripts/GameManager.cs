@@ -7,42 +7,72 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private GameObject panelSettings;
-	[SerializeField] private TextMeshProUGUI textScore;
+    [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private TextMeshProUGUI textScore;
+    [SerializeField] private bool menuIsStatic;
+    private bool menuIsActive;
 
-	[Header("Settings")]
-    [SerializeField] private int botCount;
-	public int score;
+    [Header("Settings")] [SerializeField] private int botCount;
+    public int score;
 
     private void Awake()
     {
         Instance = this;
-    }
-    
-    private void Start()
-    {
-        if (panelSettings)
-            panelSettings.SetActive(false);
+        menuIsActive = !menuIsStatic;
     }
 
-	public void UpdateScore()
-	{
+    private void Start()
+    {
+        if (menuPanel)
+            menuPanel.SetActive(menuIsStatic);
+        if (settingsPanel)
+            settingsPanel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!menuIsStatic && Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (menuIsActive)
+                Resume();
+            else
+                Pause();
+        }
+    }
+
+    public void Resume()
+    {
+        menuIsActive = false;
+        Time.timeScale = 1f;
+        menuPanel.SetActive(menuIsActive);
+    }
+
+    public void Pause()
+    {
+        menuIsActive = true;
+        Time.timeScale = 0f;
+        menuPanel.SetActive(menuIsActive);
+    }
+
+    public void UpdateScore()
+    {
         if (textScore)
-		    textScore.text = $"Score: {score}";
+            textScore.text = $"Score: {score}";
         if (score >= botCount)
             LoadWinScreen();
-	}
+    }
 
     public void Play()
     {
         SceneManager.LoadScene("Game");
     }
-    
+
     public void LoadWinScreen()
     {
         SceneManager.LoadScene("Win Screen");
     }
-    
+
     public void LoadLossScreen()
     {
         SceneManager.LoadScene("Loss Screen");
@@ -55,13 +85,13 @@ public class GameManager : MonoBehaviour
 
     public void Settings()
     {
-        if (panelSettings.activeSelf == false)
+        if (settingsPanel.activeSelf == false)
         {
-            panelSettings.SetActive(true);
+            settingsPanel.SetActive(true);
         }
         else
         {
-            panelSettings.SetActive(false);
+            settingsPanel.SetActive(false);
         }
     }
 
