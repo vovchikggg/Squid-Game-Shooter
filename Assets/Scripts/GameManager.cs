@@ -79,10 +79,12 @@ public class GameManager : MonoBehaviour
     {
         if (settingsPanel.activeSelf == false)
         {
+            menuPanel.SetActive(false);
             settingsPanel.SetActive(true);
         }
         else
         {
+            menuPanel.SetActive(true);
             settingsPanel.SetActive(false);
         }
     }
