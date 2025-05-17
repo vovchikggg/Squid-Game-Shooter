@@ -1,4 +1,7 @@
+using Unity.Mathematics;
+using Unity.Mathematics.Geometry;
 using UnityEngine;
+using Math = System.Math;
 
 public class BotAI : MonoBehaviour
 {
@@ -62,6 +65,7 @@ public class BotAI : MonoBehaviour
             if (distance > stoppingDistance)
             {
                 rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+                rb.SetRotation(Vector2.SignedAngle(direction, Vector2.up));
             }
         }
     }
