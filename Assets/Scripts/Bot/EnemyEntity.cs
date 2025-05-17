@@ -7,28 +7,24 @@ public class EnemyEntity : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private HealthBar healthBar;
-    private int _currentHealth;
     
     private void Start()
     {
-        _currentHealth = maxHealth;
-        healthBar.SetMaxHealth(_currentHealth);
-        healthBar.SetHealth(_currentHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        _currentHealth -= damage;
-        healthBar.SetHealth(_currentHealth);
+        healthBar.TakeDamage(damage);
         DetectDeath();
     }
 
     private void DetectDeath()
     {
-        if (_currentHealth <= 0)
+        if (healthBar.GetHealth() <= 0)
         {
-            Destroy(gameObject);
             PlayerScore.Instance.HandleBotDeath();
+            Destroy(gameObject);
         }
     }
 }

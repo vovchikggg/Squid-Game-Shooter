@@ -6,22 +6,22 @@ using UnityEngine.Serialization;
 public class PlayerEntity : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private HealthBar healthBar;
     
     private void Start()
     {
-        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        healthBar.TakeDamage(damage);
         DetectDeath();
     }
 
     private void DetectDeath()
     {
-        if (currentHealth <= 0)
+        if (healthBar.GetHealth() <= 0)
         {
             GameManager.Instance.LoadLossScreen();
             Destroy(gameObject);

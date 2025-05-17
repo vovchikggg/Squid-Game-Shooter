@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9142523398952867609}
   - component: {fileID: 5570114925886171187}
   m_Layer: 8
-  m_Name: Slider
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

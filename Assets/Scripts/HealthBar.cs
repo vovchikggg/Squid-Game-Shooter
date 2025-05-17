@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     private Slider slider;
+    private float currentHealth;
 
     public void Awake()
     {
@@ -13,12 +14,19 @@ public class HealthBar : MonoBehaviour
 
     public void SetMaxHealth(float health)
     {
-        slider.maxValue = health;
+        currentHealth = health;
+        slider.maxValue = currentHealth;
     }
 
-    public void SetHealth(float health)
+    public float GetHealth()
     {
-        slider.gameObject.SetActive(health > 0);
-        slider.value = health;
+        return currentHealth;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        slider.gameObject.SetActive(currentHealth > 0);
+        slider.value = currentHealth;
     }
 }
