@@ -9,17 +9,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject settingsPanel;
-    [SerializeField] private TextMeshProUGUI textScore;
     [SerializeField] private bool menuIsStatic;
     private bool menuIsActive;
-
-    [Header("Settings")] [SerializeField] private int botCount;
-    public int score;
 
     private void Awake()
     {
         Instance = this;
-        menuIsActive = !menuIsStatic;
+        menuIsActive = menuIsStatic;
     }
 
     private void Start()
@@ -55,31 +51,27 @@ public class GameManager : MonoBehaviour
         menuPanel.SetActive(menuIsActive);
     }
 
-    public void UpdateScore()
-    {
-        if (textScore)
-            textScore.text = $"Score: {score}";
-        if (score >= botCount)
-            LoadWinScreen();
-    }
-
     public void Play()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
     }
 
     public void LoadWinScreen()
     {
+        Time.timeScale = 0f;
         SceneManager.LoadScene("Win Screen");
     }
 
     public void LoadLossScreen()
     {
+        Time.timeScale = 0f;
         SceneManager.LoadScene("Loss Screen");
     }
 
     public void Back()
     {
+        Time.timeScale = 0f;
         SceneManager.LoadScene("Main Menu");
     }
 
@@ -97,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
+        Time.timeScale = 0f;
         Application.Quit();
     }
 }

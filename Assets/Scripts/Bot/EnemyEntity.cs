@@ -28,8 +28,7 @@ public class EnemyEntity : MonoBehaviour
         if (_currentHealth <= 0)
         {
             Destroy(gameObject);
-            GameManager.Instance.score++;
-            GameManager.Instance.UpdateScore();
+            PlayerScore.Instance.HandleBotDeath();
         }
     }
 }

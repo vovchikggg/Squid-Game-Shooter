@@ -247,8 +247,8 @@ Transform:
   m_LocalScale: {x: 0.0338, y: 0.0338, z: 0.0338}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6915515618034509343}
   - {fileID: 8091975241645681951}
+  - {fileID: 6915515618034509343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6057624463055870290
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 6223071312653087401}
   - component: {fileID: 2502138213204243236}
   m_Layer: 8
-  m_Name: Canvas
+  m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
