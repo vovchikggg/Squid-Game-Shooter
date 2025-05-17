@@ -5,21 +5,28 @@ public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore Instance;
     
-    [SerializeField] private TextMeshProUGUI textScore;
     [SerializeField] private int botCount;
-    private int score;
+    [SerializeField] private Bar scoreBar;
     
     private void Awake()
     {
         Instance = this;
     }
     
+    private void Start()
+    {
+        scoreBar.SetMaxValue(botCount);
+    }
+    
     public void HandleBotDeath()
     {
-        score++;
-        if (textScore)
-            textScore.text = $"Score: {score}";
-        if (score >= botCount)
+        scoreBar.IncreaseValue(1f);
+        DetectWin();
+    }
+
+    private void DetectWin()
+    {
+        if (scoreBar.GetCurrentValue() >= botCount)
             GameManager.Instance.LoadWinScreen();
     }
 }

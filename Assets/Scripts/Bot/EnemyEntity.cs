@@ -6,22 +6,23 @@ using UnityEngine.Serialization;
 public class EnemyEntity : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Bar healthBar;
     
     private void Start()
     {
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxValue(maxHealth);
+        healthBar.SetCurrentValue(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        healthBar.TakeDamage(damage);
+        healthBar.DecreaseValue(damage);
         DetectDeath();
     }
 
     private void DetectDeath()
     {
-        if (healthBar.GetHealth() <= 0)
+        if (healthBar.GetCurrentValue() <= 0)
         {
             PlayerScore.Instance.HandleBotDeath();
             Destroy(gameObject);
