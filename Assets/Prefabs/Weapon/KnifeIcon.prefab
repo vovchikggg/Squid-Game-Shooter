@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1617858402480824096}
   - component: {fileID: 1881672184117512496}
   - component: {fileID: 5636271108470681933}
+  - component: {fileID: -3744479110637627010}
   m_Layer: 5
   m_Name: KnifeIcon
   m_TagString: Untagged
@@ -89,4 +90,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 7132115487048542755, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-  player: {fileID: 0}
+--- !u!114 &-3744479110637627010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4191156928985498010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d72e20e11f43e09935df68168f596e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 4191156928985498010}
