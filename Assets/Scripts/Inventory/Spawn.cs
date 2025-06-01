@@ -3,8 +3,9 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private GameObject item;
-    private float xOffset = 3;
-    private float yOffset = 3;
+    private float xOffset = 3f;
+    private float yOffset = 3f;
+    private float zOffset = -0.75f;
     private Transform player;
 
     private void Start()
@@ -14,7 +15,7 @@ public class Spawn : MonoBehaviour
 
     public void SpawnDroppedItem()
     {
-        var playerPos = new Vector2(player.position.x + xOffset, player.position.y + yOffset);
+        var playerPos = new Vector3(player.position.x + xOffset, player.position.y + yOffset, zOffset);
         Instantiate(item, playerPos, Quaternion.identity);
     }
 }

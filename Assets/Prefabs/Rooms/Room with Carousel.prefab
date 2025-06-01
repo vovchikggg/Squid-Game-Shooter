@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5919203330235589835}
   - component: {fileID: 8175095648999066079}
   - component: {fileID: 1751939937713339882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041B\u0435\u0432\u0430\u044F \u0441\u0442\u0435\u043D\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6885782601055502075}
   - component: {fileID: 6971246550787926348}
   - component: {fileID: 6629000980605223271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041F\u0440\u0430\u0432\u0430\u044F \u0441\u0442\u0435\u043D\u0430 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 2862924131268449323}
   - component: {fileID: 2772305994267665027}
   - component: {fileID: 8355774836730440104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041F\u0440\u0430\u0432\u0430\u044F \u0441\u0442\u0435\u043D\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 6036575814880673195}
   - component: {fileID: 5478342734042179559}
   - component: {fileID: 1046181100849523765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041D\u0438\u0436\u043D\u044F\u044F \u0441\u0442\u0435\u043D\u0430 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 3480354926495009235}
   - component: {fileID: 3481985334820728451}
   - component: {fileID: 7394992920121871735}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041B\u0435\u0432\u0430\u044F \u0441\u0442\u0435\u043D\u0430 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 4862979212232882169}
   - component: {fileID: 2583740623899894077}
   - component: {fileID: 6537987943847116276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0441\u0442\u0435\u043D\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 5698025652532593839}
   - component: {fileID: 4192549071510644207}
   - component: {fileID: 770071856745284608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0412\u0435\u0440\u0445\u043D\u044F\u044F \u0441\u0442\u0435\u043D\u0430
     (1)"
   m_TagString: Untagged
@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 4482999725363177405}
   - component: {fileID: 2657713576132295582}
   - component: {fileID: 2027943962202093500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u041D\u0438\u0436\u043D\u044F\u044F \u0441\u0442\u0435\u043D\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,6 +1344,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 774288691248675756}
     m_Modifications:
+    - target: {fileID: 766264718353377323, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1311006627187166928, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.281925
@@ -1414,6 +1418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 774288691248675756}
     m_Modifications:
+    - target: {fileID: 766264718353377323, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1311006627187166928, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.342663
@@ -1670,6 +1678,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 774288691248675756}
     m_Modifications:
+    - target: {fileID: 766264718353377323, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1311006627187166928, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.442799
@@ -1802,6 +1814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 774288691248675756}
     m_Modifications:
+    - target: {fileID: 766264718353377323, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1311006627187166928, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.38206
