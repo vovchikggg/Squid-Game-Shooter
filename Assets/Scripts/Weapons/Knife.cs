@@ -4,7 +4,6 @@ using UnityEngine.Serialization;
 
 public class Knife : Item
 {
-
     [SerializeField] private int damageAmount;
 
     private string IS_ATTACK_KNIFE = "IsAttackKnife";
@@ -58,6 +57,8 @@ public class Knife : Item
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
+        
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
         {
             enemyEntity.TakeDamage(damageAmount);

@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  pickedUp: 1
 --- !u!60 &7277045962401447359
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -247,8 +248,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.59404105, y: 0.63934994}
-  m_Radius: 0.64599377
+  m_Offset: {x: -0.625, y: 0.65}
+  m_Radius: 0.45
 --- !u!50 &2525617216286383287
 Rigidbody2D:
   serializedVersion: 5

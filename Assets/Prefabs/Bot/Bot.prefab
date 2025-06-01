@@ -387,7 +387,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -623,6 +623,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1311006627187166928}
     m_Modifications:
+    - target: {fileID: 2852619719008907035, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: pickedUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852619719008907035, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852619719008907035, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: itemPickedUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7132115487048542755, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_Name
       value: Sword

@@ -4,20 +4,23 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     [SerializeField] public GameObject icon;
+    public bool itemPickedUp;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!enabled) return;
+
+        if (!other.CompareTag("Player")) return;
+        
+        for (var i = 0; i < Inventory.Instance.slots.Length; i++)
         {
-            for (var i = 0; i < Inventory.Instance.slots.Length; i++)
+            if (!Inventory.Instance.isFull[i])
             {
-                if (!Inventory.Instance.isFull[i])
-                {
-                    Inventory.Instance.isFull[i] = true;
-                    Instantiate(icon, Inventory.Instance.slots[i].transform);
-                    Destroy(gameObject);
-                    break;
-                }
+                itemPickedUp = true;
+                Inventory.Instance.isFull[i] = true;
+                Instantiate(icon, Inventory.Instance.slots[i].transform);
+                Destroy(gameObject);
+                break;
             }
         }
     }
