@@ -20,33 +20,32 @@ public class ItemUse : MonoBehaviour
     {
         var inventorySlotChild = default(GameObject);
         var weaponSlotChild = default(GameObject);
-
-        (Inventory.Instance.weaponSlotIsFull, Inventory.Instance.isFull[Inventory.Instance.activeSlot]) =
-            (Inventory.Instance.isFull[Inventory.Instance.activeSlot], Inventory.Instance.weaponSlotIsFull);
         
         foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
         {
-            var useComponent = child.GetComponent<Icon>();
-            if (useComponent)
-            {
-                inventorySlotChild = useComponent.icon;
-                Destroy(child.gameObject);
-            }
+            var iconComponent = child.GetComponent<Icon>();
+            if (iconComponent)
+                inventorySlotChild = iconComponent.icon;
         }
         foreach (Transform child in Inventory.Instance.weaponSlot.transform)
         {
-            var useComponent = child.GetComponent<Icon>();
-            if (useComponent)
-            {
-                weaponSlotChild = useComponent.icon;
-                Destroy(child.gameObject);
-            }
+            var iconComponent = child.GetComponent<Icon>();
+            if (iconComponent)
+                weaponSlotChild = iconComponent.icon;
         }
 
-        if (weaponSlotChild)
-            Instantiate(weaponSlotChild, Inventory.Instance.slots[Inventory.Instance.activeSlot].transform);
-        if (inventorySlotChild)
-            Instantiate(inventorySlotChild, Inventory.Instance.weaponSlot.transform);
+        if (!weaponSlotChild || !inventorySlotChild) return;
+        
+        foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
+            Destroy(child.gameObject);
+        foreach (Transform child in Inventory.Instance.weaponSlot.transform)
+            Destroy(child.gameObject);
+        
+        (Inventory.Instance.weaponSlotIsFull, Inventory.Instance.isFull[Inventory.Instance.activeSlot]) =
+            (Inventory.Instance.isFull[Inventory.Instance.activeSlot], Inventory.Instance.weaponSlotIsFull);
+        
+        Instantiate(weaponSlotChild, Inventory.Instance.slots[Inventory.Instance.activeSlot].transform);
+        Instantiate(inventorySlotChild, Inventory.Instance.weaponSlot.transform);
 
         foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
         {

@@ -3,6 +3,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
+    
+    public bool weaponSlotIsFull;
+    public bool[] isFull;
+    public GameObject weaponSlot;
+    public GameObject[] slots;
+    public int activeSlot;
 
     private void Start()
     {
@@ -42,11 +48,4 @@ public class Inventory : MonoBehaviour
         foreach (var slot in slots)
             slot.GetComponent<Slot>().ChangeSlotColor();
     }
-    
-    public bool weaponSlotIsFull;
-    public bool[] isFull;
-    public GameObject weaponSlot;
-    public GameObject[] slots;
-    
-    public int activeSlot;
 }
