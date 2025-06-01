@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6295793373804302045}
   - component: {fileID: 572049081940635945}
   - component: {fileID: 6731785666799554035}
+  - component: {fileID: -4455868553538318909}
+  - component: {fileID: 6267541572977009682}
+  - component: {fileID: -5500522564155576418}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.009122991, y: -0.022048369, z: 0.095147505, w: 0.9951772}
   m_LocalPosition: {x: 5.82, y: 6.38, z: -92.51}
-  m_LocalScale: {x: 0.16058958, y: 0.16058958, z: 0.16058958}
+  m_LocalScale: {x: 0.16058958, y: 0.16058958, z: 1.128872}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3553682138771368991}
@@ -104,6 +107,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4455868553538318909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753599326159019714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2c7972045708b489a1a457dea10a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 7381933031802750281, guid: 20e5826b3d9337c419bf136668366bae, type: 3}
+--- !u!58 &6267541572977009682
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753599326159019714}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.3515215, y: 0.30734962}
+  m_Radius: 4.977311
+--- !u!50 &-5500522564155576418
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753599326159019714}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4057388498022015694
 GameObject:
   m_ObjectHideFlags: 0
