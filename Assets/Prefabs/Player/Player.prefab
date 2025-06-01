@@ -431,7 +431,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 48.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -838,14 +838,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2530564911472380330, guid: caaaab616dc8dbd47b2f7c923725e224, type: 3}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -854,7 +854,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 6
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6011654859711395223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1518,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2163163669121104623}
     m_Modifications:
+    - target: {fileID: 548016442065413598, guid: 398c674663fbebb42955c3beb901a485, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 548016442065413598, guid: 398c674663fbebb42955c3beb901a485, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 548016442065413598, guid: 398c674663fbebb42955c3beb901a485, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4078361019213502410, guid: 398c674663fbebb42955c3beb901a485, type: 3}
       propertyPath: m_Name
       value: InventorySlot
