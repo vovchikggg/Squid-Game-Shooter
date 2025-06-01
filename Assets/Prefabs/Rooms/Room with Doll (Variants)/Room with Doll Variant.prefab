@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1262019976804745149, guid: 50588d853dba63048aba041ba8f61709, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262019976804745149, guid: 50588d853dba63048aba041ba8f61709, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1631031579957535894, guid: 50588d853dba63048aba041ba8f61709, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.0338
@@ -111,6 +119,14 @@ PrefabInstance:
     - target: {fileID: 4667495977501505461, guid: 50588d853dba63048aba041ba8f61709, type: 3}
       propertyPath: m_Name
       value: Room with Doll Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684039721217755537, guid: 50588d853dba63048aba041ba8f61709, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684039721217755537, guid: 50588d853dba63048aba041ba8f61709, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5053042768263615162, guid: 50588d853dba63048aba041ba8f61709, type: 3}
       propertyPath: m_LocalScale.x

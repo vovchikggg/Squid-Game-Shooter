@@ -1202,6 +1202,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.x
+      value: 11.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.y
+      value: 9.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5493198472420475379, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_Name
       value: Bot (14)
@@ -1336,6 +1352,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4406972240483404615, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.x
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.y
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5493198472420475379, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
@@ -1474,6 +1506,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.x
+      value: 11.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Size.y
+      value: 9.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5493198472420475379, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_Name
       value: Bot (15)
@@ -1496,10 +1544,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4469904851121245034}
     m_Modifications:
-    - target: {fileID: 766264718353377323, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1311006627187166928, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.339083
