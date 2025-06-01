@@ -16,6 +16,7 @@ public class PlayerEntity : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        AudioManager.Instance.takingDamageSound.Play();
         healthBar.DecreaseValue(damage);
         DetectDeath();
     }
@@ -24,6 +25,7 @@ public class PlayerEntity : MonoBehaviour
     {
         if (healthBar.GetCurrentValue() <= 0)
         {
+            AudioManager.Instance.deathSound.Play();
             GameManager.Instance.LoadLossScreen();
             Destroy(gameObject);
         }
