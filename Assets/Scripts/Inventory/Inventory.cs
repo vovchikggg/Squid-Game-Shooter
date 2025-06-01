@@ -20,36 +20,7 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            var inventorySlotChild = default(GameObject);
-            
-            foreach (Transform child in slots[activeSlot].transform)
-            {
-                inventorySlotChild = child.gameObject;
-            }
-            var weaponSlotChild = default(GameObject);
-            
-            foreach (Transform child in weaponSlot.transform)
-            {
-                weaponSlotChild = child.gameObject;
-            }
-            
-            (inventorySlotChild, weaponSlotChild) = (weaponSlotChild, inventorySlotChild);
-
-            foreach (Transform child in slots[activeSlot].transform)
-            {
-                Destroy(child.gameObject);
-            }
-            
-            foreach (Transform child in weaponSlot.transform)
-            {
-                Destroy(child.gameObject);
-            }
-
-            if (inventorySlotChild)
-                Instantiate(inventorySlotChild, slots[activeSlot].transform);
-            
-            if (weaponSlotChild)
-                Instantiate(weaponSlotChild, weaponSlot.transform);
+            ItemUse.Instance.UseItem();
         }
     }
     

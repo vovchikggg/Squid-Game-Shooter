@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    [SerializeField] private GameObject icon;
+    [SerializeField] public GameObject icon;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
