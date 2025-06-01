@@ -1699,41 +1699,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: weaponSlot
-      value: 
-      objectReference: {fileID: 1778773292}
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: slots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: isFull.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: 'slots.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1594249870}
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: 'slots.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2112412457}
-    - target: {fileID: 392913453855359649, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: 'slots.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1351495010}
     - target: {fileID: 1339453727460264787, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395274138431432529, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_Name
-      value: InventorySlot (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1581014718569095700, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -380
       objectReference: {fileID: 0}
     - target: {fileID: 3094635713616778068, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1742,26 +1710,6 @@ PrefabInstance:
     - target: {fileID: 3094635713616778068, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129654577799854646, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_Name
-      value: InventorySlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297517478437486451, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3936700685230823112, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: i
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4327799344943713651, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_Name
-      value: WeaponSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 5326753870087178173, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: i
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6320614176354084854, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_Camera
@@ -1807,25 +1755,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7691429653348234081, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -190
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786886938631157284, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: m_Name
-      value: InventorySlot (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8196369532186511118, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8205462048896326362, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-      propertyPath: i
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7303203772929759495, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
@@ -4563,11 +4498,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329219873}
   m_CullTransparentMesh: 1
---- !u!1 &1351495010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5139697374957249425, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-  m_PrefabInstance: {fileID: 302249700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1451789879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 788000779632446687, guid: 4d68740ad4b18e049aca1238ec864715, type: 3}
@@ -4802,11 +4732,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.000015258789}
   m_Radius: 150
---- !u!1 &1594249870 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9178364256457096950, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-  m_PrefabInstance: {fileID: 302249700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597904970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,11 +5303,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.000061035156, y: 0}
   m_Radius: 150
---- !u!1 &1778773292 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7494468597136411059, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-  m_PrefabInstance: {fileID: 302249700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1818840486
 GameObject:
   m_ObjectHideFlags: 0
@@ -7153,11 +7073,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.000061035156, y: 0.000061035156}
   m_Radius: 150
---- !u!1 &2112412457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4043750336997241572, guid: 7af2593ca6c894d4589e5daf0d8ca9d4, type: 3}
-  m_PrefabInstance: {fileID: 302249700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2135720198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4113078498799360972, guid: 4d68740ad4b18e049aca1238ec864715, type: 3}

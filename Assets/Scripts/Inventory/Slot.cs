@@ -3,13 +3,17 @@ using UnityEngine;
 public class Slot : MonoBehaviour
 {
     [SerializeField] private Inventory inventory;
+    [SerializeField] private bool isInventorySlot;
     [SerializeField] private int i;
 
     private void Update()
     {
         if (transform.childCount <= 0)
         {
-            inventory.isFull[i] = false;
+            if (!isInventorySlot)
+                Inventory.Instance.weaponSlotIsFull = false;
+            else
+                Inventory.Instance.isFull[i] = false;
         }
     }
 

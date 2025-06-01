@@ -19,9 +19,9 @@ public class Inventory : MonoBehaviour
             activeSlot = 2;
 
         if (Input.GetKeyDown(KeyCode.E))
-        {
             ItemUse.Instance.UseItem();
-        }
+        
+        Debug.Log((weaponSlotIsFull, $"{isFull[0]}, {isFull[1]}, {isFull[2]}"));
     }
     
     public bool weaponSlotIsFull;

@@ -19,22 +19,44 @@ public class ItemUse : MonoBehaviour
     private void ChangeWeapon()
     {
         var inventorySlotChild = default(GameObject);
+        var weaponSlotChild = default(GameObject);
+
+        (Inventory.Instance.weaponSlotIsFull, Inventory.Instance.isFull[Inventory.Instance.activeSlot]) =
+            (Inventory.Instance.isFull[Inventory.Instance.activeSlot], Inventory.Instance.weaponSlotIsFull);
+        
         foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
         {
-            inventorySlotChild = child.GetComponent<Icon>().icon;
-            Destroy(child.gameObject);
+            var useComponent = child.GetComponent<Icon>();
+            if (useComponent)
+            {
+                inventorySlotChild = useComponent.icon;
+                Destroy(child.gameObject);
+            }
         }
-            
-        var weaponSlotChild = default(GameObject);
         foreach (Transform child in Inventory.Instance.weaponSlot.transform)
         {
-            weaponSlotChild = child.GetComponent<Icon>().icon;
-            Destroy(child.gameObject);
+            var useComponent = child.GetComponent<Icon>();
+            if (useComponent)
+            {
+                weaponSlotChild = useComponent.icon;
+                Destroy(child.gameObject);
+            }
         }
 
         if (weaponSlotChild)
             Instantiate(weaponSlotChild, Inventory.Instance.slots[Inventory.Instance.activeSlot].transform);
         if (inventorySlotChild)
             Instantiate(inventorySlotChild, Inventory.Instance.weaponSlot.transform);
+
+        foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
+        {
+            child.GetComponent<Spawn>().enabled = true;
+            child.GetComponent<Icon>().enabled = true;
+        }
+        foreach (Transform child in Inventory.Instance.weaponSlot.transform)
+        {
+            child.GetComponent<Spawn>().enabled = true;
+            child.GetComponent<Icon>().enabled = true;
+        }
     }
 }
