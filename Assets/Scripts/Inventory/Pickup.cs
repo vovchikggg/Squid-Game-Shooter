@@ -14,7 +14,6 @@ public class Pickup : MonoBehaviour
                 if (!Inventory.Instance.isFull[i])
                 {
                     Inventory.Instance.isFull[i] = true;
-                    Debug.Log(Inventory.Instance.isFull[i]);
                     Instantiate(icon, Inventory.Instance.slots[i].transform);
                     Destroy(gameObject);
                     break;

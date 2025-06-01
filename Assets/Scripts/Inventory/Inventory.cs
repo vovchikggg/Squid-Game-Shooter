@@ -21,7 +21,8 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
             ItemUse.Instance.UseItem();
         
-        Debug.Log((weaponSlotIsFull, $"{isFull[0]}, {isFull[1]}, {isFull[2]}"));
+        if (Input.GetKeyDown(KeyCode.Q))
+            slots[activeSlot].transform.GetComponent<Slot>().DropItem();
     }
     
     public bool weaponSlotIsFull;
