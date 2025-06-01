@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
@@ -27,6 +28,20 @@ public class Slot : MonoBehaviour
                 child.GetComponent<Spawn>().SpawnDroppedItem();
                 Destroy(child.gameObject);
             }
+        }
+    }
+    
+    public void ChangeSlotColor()
+    {
+        if (inventory.activeSlot == i)
+        {
+            var activeSlotColor = new Color(225f / 255f, 225f / 255f, 225f / 255f, 200f / 255f);
+            inventory.slots[i].transform.GetComponent<Image>().color = activeSlotColor;
+        }
+        else
+        {
+            var inactiveSlotColor = new Color(0f / 255f, 0f / 255f, 0f / 255f, 200f / 255f);
+            inventory.slots[i].transform.GetComponent<Image>().color = inactiveSlotColor;
         }
     }
 }
