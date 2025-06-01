@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int _currentHealth;
     [SerializeField] private float shrinkFactor;
-    [SerializeField] private List<Item> items;
+    [SerializeField] private List<Item> icons;
     
     private void Start()
     {
@@ -25,9 +25,9 @@ public class Chest : MonoBehaviour
     {
         if (_currentHealth <= 0)
         {
-            foreach (var item in items)
+            foreach (var icon in icons)
             {
-                Instantiate(item, transform.position, Quaternion.identity);
+                Instantiate(icon.GetComponent<Spawn>().item, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

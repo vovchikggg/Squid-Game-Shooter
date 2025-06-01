@@ -5,7 +5,6 @@ public class ShotGun : MonoBehaviour
     public GameObject bullet;
     public Transform shotPoint;
 
-
     private bool isFireShotGun;
     private float timeBtwShots;
     public float startTimeBtwShot;
@@ -14,11 +13,12 @@ public class ShotGun : MonoBehaviour
     {
         if (timeBtwShots <= 0)
         {
-            if (Input.GetMouseButton(0))
-            {
-                Instantiate(bullet, shotPoint.position, transform.rotation);
-                timeBtwShots = startTimeBtwShot;
-            }
+            if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
+            
+            if (!Input.GetMouseButton(0)) return;
+            
+            Instantiate(bullet, shotPoint.position, transform.rotation);
+            timeBtwShots = startTimeBtwShot;
         }
         else
         {

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private GameObject item;
+    [SerializeField] public GameObject item;
     private float xOffset = 3f;
     private float yOffset = 3f;
     private float zOffset = -0.75f;

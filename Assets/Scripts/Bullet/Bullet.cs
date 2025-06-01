@@ -10,15 +10,21 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
-        if (hitInfo.collider != null)
+        var hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        
+        if (hitInfo.collider)
         {
-            if (hitInfo.collider.CompareTag("EnemyEntity"))
-            {
+            if (hitInfo.collider.GetComponent<EnemyEntity>())
                 hitInfo.collider.GetComponent<EnemyEntity>().TakeDamage(damage);
-            }
+            
+            if (hitInfo.collider.GetComponent<Chest>())
+                hitInfo.collider.GetComponent<Chest>().TakeDamage(damage);
+        
+            if (hitInfo.collider.GetComponent<PlayerEntity>())
+                hitInfo.collider.GetComponent<PlayerEntity>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 }

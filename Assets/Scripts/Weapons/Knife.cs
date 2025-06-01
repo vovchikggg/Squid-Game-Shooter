@@ -60,19 +60,13 @@ public class Knife : Item
         if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
         
         if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
-        {
             enemyEntity.TakeDamage(damageAmount);
-        }
         
         if (collision.transform.TryGetComponent(out Chest chest))
-        {
             chest.TakeDamage(damageAmount);
-        }
         
         if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
-        {
             playerEntity.TakeDamage(damageAmount);
-        }
     }
 
     public void AttackColliderTurnOff()
