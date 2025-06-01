@@ -41,7 +41,8 @@ public class Knife : Item
 
     public void SetAnimationAttackKnife()
     {
-        animator.SetBool(IS_ATTACK_KNIFE, isAttackKnife);
+        if (animator)
+            animator.SetBool(IS_ATTACK_KNIFE, isAttackKnife);
     }
 
 

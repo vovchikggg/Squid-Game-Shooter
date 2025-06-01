@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int _currentHealth;
     [SerializeField] private float shrinkFactor;
-    [SerializeField] private List<Item> icons;
+    [SerializeField] private List<Icon> icons;
     
     private void Start()
     {
@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
-        transform.localScale *= shrinkFactor;
+        transform.localScale *= shrinkFactor * damage;
         DetectDeath();
     }
 

@@ -104,10 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 15
-  shrinkFactor: 0.7
-  items:
-  - {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-  - {fileID: 572049081940635945, guid: 3b27bb74b267e904eac7bb049cc9ba1a, type: 3}
+  shrinkFactor: 0.1
+  icons:
+  - {fileID: 2309847699303681165, guid: 4e5a0926ffcf13e48831af6c9be82c29, type: 3}
+  - {fileID: 7186635012552188713, guid: adceb631e0ad3cc41bc48377bd7b3e29, type: 3}
 --- !u!61 &8680225744217696449
 BoxCollider2D:
   m_ObjectHideFlags: 0
