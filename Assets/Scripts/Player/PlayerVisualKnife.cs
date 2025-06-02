@@ -39,7 +39,7 @@ public class PlayerVisualKnife : MonoBehaviour
 
     public void animationRun()
     {
-        animator.SetBool(IS_RUN_KNIFE, PlayerKnife.Instance.IsRun());
+        animator.SetBool(IS_RUN_KNIFE, PlayerController.Instance.IsRun());
     }
 
     public void animationAttack()

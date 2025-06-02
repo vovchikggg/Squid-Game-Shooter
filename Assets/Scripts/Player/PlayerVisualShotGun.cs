@@ -38,7 +38,7 @@ public class PlayerVisualShotGun : MonoBehaviour
 
     public void animationRun()
     {
-        animator.SetBool(IS_RUN_SHOT_GUN, PlayerShotGun.Instance.IsRun());
+        animator.SetBool(IS_RUN_SHOT_GUN, PlayerController.Instance.IsRun());
     }
 
     public void animationFire()
