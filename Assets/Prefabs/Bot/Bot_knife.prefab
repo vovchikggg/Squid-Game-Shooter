@@ -657,10 +657,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1311006627187166928}
     m_Modifications:
     - target: {fileID: 2852619719008907035, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-      propertyPath: pickedUp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2852619719008907035, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -668,25 +664,13 @@ PrefabInstance:
       propertyPath: itemPickedUp
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6608538818858181004, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: weaponOwner
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7132115487048542755, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_Name
       value: Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 7712532365675689712, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 21.800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7712532365675689712, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 21.800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7712532365675689712, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 21.8
       objectReference: {fileID: 0}
     - target: {fileID: 7712532365675689712, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: m_LocalPosition.x

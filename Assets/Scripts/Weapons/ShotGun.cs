@@ -4,6 +4,7 @@ public class ShotGun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shotPoint;
+    [SerializeField] private WeaponOwner weaponOwner;
 
     private bool isFireShotGun;
     private float timeBtwShots;

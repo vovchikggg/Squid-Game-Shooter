@@ -50,7 +50,8 @@ namespace TMPro.Examples
 
         void Update()
         {
-            m_textMeshPro.SetText(label, m_frame % 1000);
+            if (m_textMeshPro)
+                m_textMeshPro.SetText(label, m_frame % 1000);
             m_frame += 1 * Time.deltaTime;
         }
 

@@ -6503,7 +6503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_LocalScale.x
@@ -7548,6 +7548,10 @@ PrefabInstance:
     - target: {fileID: 774288691248675756, guid: 4d68740ad4b18e049aca1238ec864715, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136522834483028558, guid: 4d68740ad4b18e049aca1238ec864715, type: 3}
+      propertyPath: weaponOwner
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3359436499662545448, guid: 4d68740ad4b18e049aca1238ec864715, type: 3}
       propertyPath: m_AnchorMax.x

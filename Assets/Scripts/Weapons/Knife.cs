@@ -5,6 +5,8 @@ using UnityEngine.Serialization;
 public class Knife : Item
 {
     [SerializeField] private int damageAmount;
+    
+    [SerializeField] private WeaponOwner weaponOwner;
 
     private string IS_ATTACK_KNIFE = "IsAttackKnife";
 
@@ -59,15 +61,25 @@ public class Knife : Item
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
-        
-        if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
-            enemyEntity.TakeDamage(damageAmount);
-        
+
+        switch (weaponOwner)
+        {
+            case WeaponOwner.Player:
+            {
+                if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+                    enemyEntity.TakeDamage(damageAmount);
+                break;
+            }
+            case WeaponOwner.Enemy:
+            {
+                if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
+                    playerEntity.TakeDamage(damageAmount);
+                break;
+            }
+        }
+
         if (collision.transform.TryGetComponent(out Chest chest))
             chest.TakeDamage(damageAmount);
-        
-        if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
-            playerEntity.TakeDamage(damageAmount);
     }
 
     public void AttackColliderTurnOff()
