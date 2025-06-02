@@ -2,47 +2,46 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    public GameObject shotgunHolder;   // Ссылка на GameObject, содержащий персонажа с дробовиком
-    public GameObject knifeHolder;      // Ссылка на GameObject, содержащий персонажа с ножом
-    public enum WeaponType { Knife, Shotgun }; // Перечисление типов оружия
-    public WeaponType currentWeapon = WeaponType.Knife;
-    private GameObject currentHolder;   // Текущий активный WeaponHolder
+    public GameObject shotgunHolder;
+    public GameObject knifeHolder;
+    private GameObject currentHolder;
+    
+    public static PlayerWeapon Instance;
 
-    void Start()
+    private void Awake()
     {
-        if (knifeHolder != null) knifeHolder.SetActive(true);  // Start with Knife
-        if (shotgunHolder != null) shotgunHolder.SetActive(false);
-        currentHolder = knifeHolder; // Устанавливаем начальный holder
+        Instance = this;
     }
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SetWeapon(WeaponType.Knife);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SetWeapon(WeaponType.Shotgun);
-        }
+        if (knifeHolder)
+            knifeHolder.SetActive(true);
+        if (shotgunHolder)
+            shotgunHolder.SetActive(false);
+        currentHolder = knifeHolder;
     }
 
-    void SetWeapon(WeaponType weapon)
+    private void Update()
     {
-        if (weapon == currentWeapon) return; // Nothing to do
+        SetWeapon(Inventory.Instance.weaponSlot.transform.GetChild(0).GetComponent<Icon>().weaponType);
+    }
 
-        currentWeapon = weapon;
-
-        if (currentHolder != null) currentHolder.SetActive(false);  // Отключаем старое оружие
+    private void SetWeapon(WeaponType weapon)
+    {
+        if (currentHolder)
+            currentHolder.SetActive(false);
 
         switch (weapon)
         {
             case WeaponType.Knife:
-                if (knifeHolder != null) knifeHolder.SetActive(true);
+                if (knifeHolder)
+                    knifeHolder.SetActive(true);
                 currentHolder = knifeHolder;
                 break;
             case WeaponType.Shotgun:
-                if (shotgunHolder != null) shotgunHolder.SetActive(true);
+                if (shotgunHolder)
+                    shotgunHolder.SetActive(true);
                 currentHolder = shotgunHolder;
                 break;
         }

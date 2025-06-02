@@ -35,7 +35,6 @@ public class ItemUse : MonoBehaviour
         }
 
         if (!weaponSlotChild || !inventorySlotChild) return;
-        
         foreach (Transform child in Inventory.Instance.slots[Inventory.Instance.activeSlot].transform)
             Destroy(child.gameObject);
         foreach (Transform child in Inventory.Instance.weaponSlot.transform)

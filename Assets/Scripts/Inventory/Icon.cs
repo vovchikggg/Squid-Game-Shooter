@@ -2,5 +2,6 @@
 
 public class Icon : MonoBehaviour
 {
-    [SerializeField] public GameObject icon;
+    public GameObject icon;
+    public WeaponType weaponType;
 }
