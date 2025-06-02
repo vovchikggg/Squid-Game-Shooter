@@ -45,7 +45,7 @@ public class BotAI_shotgun : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInSight = false;
-            Gun.SetFire(true);
+            Gun.SetFire(false);
         }
     }
 
