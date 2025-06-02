@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
         menuPanel.SetActive(menuIsActive);
     }
 
+    public void LoadStoryAndTips()
+    {
+        SceneManager.LoadScene("Story & Tips");
+    }
+
     public void Play()
     {
         Time.timeScale = 1f;
