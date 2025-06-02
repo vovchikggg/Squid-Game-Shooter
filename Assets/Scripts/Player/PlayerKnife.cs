@@ -3,13 +3,11 @@
 public class PlayerKnife : MonoBehaviour
 {
     public static PlayerKnife Instance { get; private set; }
+    private Animator animator;
+    private const string IS_RUN_KNIFE = "IsRunKnife";
+    private const string IS_ATTACK_KNIFE = "IsAttackKnife";
 
     [SerializeField] public Knife Knife;
-
-    private void Start()
-    {
-        GameInput.Instance.OnPlayerAttack += Player_OnPlayerAttack; //пишем не в Awake, так как Awake рандомно вызывается
-    }
 
     private void Player_OnPlayerAttack(object sender, System.EventArgs e)
     {
@@ -22,6 +20,7 @@ public class PlayerKnife : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -34,11 +33,25 @@ public class PlayerKnife : MonoBehaviour
         {
             Knife.SetAttack(false);
         }
+        animationRun();
+        animationAttack();
     }
 
     public void Attack()
     {
 
+    }
+    
+    public void animationRun()
+    {
+        animator.SetBool(IS_RUN_KNIFE, PlayerController.Instance.IsRun());
+    }
+
+    public void animationAttack()
+    {
+        animator.SetBool(IS_ATTACK_KNIFE, PlayerKnife.Instance.Knife.GetAttack());
+        
+        //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
     }
 
     public Vector3 GetPlayerScreenPosition()

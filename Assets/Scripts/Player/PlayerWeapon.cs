@@ -29,6 +29,21 @@ public class PlayerWeapon : MonoBehaviour
 
     private void SetWeapon(WeaponType weapon)
     {
+        if (currentHolder == knifeHolder)
+        {
+            if (weapon == WeaponType.Knife)
+            {
+                return;
+            }
+        }
+        if (currentHolder == shotgunHolder)
+        {
+            if (weapon == WeaponType.Shotgun)
+            {
+                return;
+            }
+        }
+        
         if (currentHolder)
             currentHolder.SetActive(false);
 

@@ -13,8 +13,6 @@ public class BotAI : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         
-        Knife.SetAttack(true);
-        
         // ���� ���� �� ���������, ���������� ����� ������ �� ���� "Player"
         if (target == null)
         {
@@ -36,6 +34,7 @@ public class BotAI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInSight = true;
+            Knife.SetAttack(true);
             Debug.Log("Player In Sight!!!!!");
         }
     }
@@ -45,6 +44,7 @@ public class BotAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Knife.SetAttack(false);
             playerInSight = false;
         }
     }
