@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rb;
     
+    public WeaponOwner weaponOwner;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,33 +18,35 @@ public class Bullet : MonoBehaviour
         if (rb)
             rb.linearVelocity = transform.right * speed;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Столкновение с: " + other.gameObject.name + ", слой: " + other.gameObject.layer);
-        
-        var enemy = other.GetComponent<EnemyEntity>();
-        if (enemy)
+        switch (weaponOwner)
         {
-            enemy.TakeDamage(damage);
-            Destroy(gameObject);
-            return;
+            case WeaponOwner.Player:
+            {
+                if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+                {
+                    enemyEntity.TakeDamage(damage);
+                    Destroy(gameObject);
+                }
+                break;
+            }
+            case WeaponOwner.Enemy:
+            {
+                if (collision.transform.TryGetComponent(out PlayerEntity playerEntity))
+                {
+                    playerEntity.TakeDamage(damage);
+                    Destroy(gameObject);
+                }
+                break;
+            }
         }
-
-        var chest = other.GetComponent<Chest>();
-        if (chest)
+        
+        if (collision.transform.TryGetComponent(out Chest chest))
         {
             chest.TakeDamage(damage);
             Destroy(gameObject);
-            return;
-        }
-
-        var player = other.GetComponent<PlayerEntity>();
-        if (player)
-        {
-            player.TakeDamage(damage);
-            Destroy(gameObject);
-            return;
         }
     }
 }

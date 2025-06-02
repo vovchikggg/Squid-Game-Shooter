@@ -51,6 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7338573560153732319, guid: 2976c29278a3a1547b9c498446a84d54, type: 3}
   shotPoint: {fileID: 6016240536791431650}
+  weaponOwner: 0
+  isFireShotGun: 0
   startTimeBtwShot: 0.15
 --- !u!114 &3123435307327049282
 MonoBehaviour:
@@ -110,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6040157196530150636, guid: 252b5de4c29ce604c8c5e73791fe1dfb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,7 +120,7 @@ SpriteRenderer:
   m_Size: {x: 6.53, y: 4.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &6805851257679702941

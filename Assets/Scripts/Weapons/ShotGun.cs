@@ -16,9 +16,12 @@ public class ShotGun : MonoBehaviour
         {
             if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
             
-            if (!Input.GetMouseButton(0)) return;
+            if (weaponOwner == WeaponOwner.Player)
+                if (!Input.GetMouseButton(0))
+                    return;
             
-            Instantiate(bullet, shotPoint.position, transform.rotation);
+            var current_bullet = Instantiate(bullet, shotPoint.position, transform.rotation);
+            current_bullet.GetComponent<Bullet>().weaponOwner = weaponOwner;
             timeBtwShots = startTimeBtwShot;
         }
         else
