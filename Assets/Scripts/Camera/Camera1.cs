@@ -15,7 +15,8 @@ public class Camera1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (GameObject.FindGameObjectWithTag("Player"))
+            player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void LateUpdate()
