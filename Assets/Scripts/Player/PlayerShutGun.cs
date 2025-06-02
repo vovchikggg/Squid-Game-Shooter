@@ -6,6 +6,11 @@ public class PlayerShotGun : MonoBehaviour
     public static PlayerShotGun Instance { get; private set; }
 
     [SerializeField] public ShotGun ShotGun;
+        private Animator animator;
+
+    private const string IS_RUN_SHOT_GUN = "IsRunShotGun";
+
+    private const string IS_FIRE_SHOT_GUN = "IsFireShotGun";
 
     private void Start()
     {
@@ -23,6 +28,7 @@ public class PlayerShotGun : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -35,8 +41,22 @@ public class PlayerShotGun : MonoBehaviour
         {
             ShotGun.SetFire(false);
         }
+        animationRun();
+        animationFire();
     }
 
+    public void animationRun()
+    {
+        animator.SetBool(IS_RUN_SHOT_GUN, PlayerController.Instance.IsRun());
+    }
+
+    public void animationFire()
+    {
+        animator.SetBool(IS_FIRE_SHOT_GUN, PlayerShotGun.Instance.ShotGun.GetFire());
+
+        //ActiveWeapon.Instance.GetActiveWeapon().SetAttack(false); // пусть пока будет здесь
+    }
+    
     public void Attack()
     {
 

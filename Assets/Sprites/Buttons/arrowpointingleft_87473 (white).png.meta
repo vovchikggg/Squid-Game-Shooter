@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arrowpointingleft_87473 (white)_0: 3173530666449716673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
