@@ -3700,13 +3700,8 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 522571313}
-    - target: {fileID: 7072995293398054694, guid: 398c674663fbebb42955c3beb901a485, type: 3}
-      propertyPath: isInventorySlot
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7591583085245431672, guid: 398c674663fbebb42955c3beb901a485, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398c674663fbebb42955c3beb901a485, type: 3}
@@ -4664,8 +4659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c73383ea3440d88e8fa071519eb0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0
-  sfxVolume: 0
+  musicVolume: 0.3
+  sfxVolume: 0.3
 --- !u!4 &1399243439
 Transform:
   m_ObjectHideFlags: 0
@@ -5005,7 +5000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotgunHolder: {fileID: 910642472}
   knifeHolder: {fileID: 1918235920}
-  currentWeapon: 1
 --- !u!114 &1503131472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5379,6 +5373,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 522571313}
+    - target: {fileID: 7072995293398054694, guid: 398c674663fbebb42955c3beb901a485, type: 3}
+      propertyPath: isInventorySlot
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7591583085245431672, guid: 398c674663fbebb42955c3beb901a485, type: 3}
@@ -6445,7 +6443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_LocalScale.x
@@ -7971,8 +7969,8 @@ SceneRoots:
   - {fileID: 1496801341}
   - {fileID: 959830397}
   - {fileID: 1483668628}
+  - {fileID: 1503131467}
   - {fileID: 1597904971}
   - {fileID: 441369400605819957}
   - {fileID: 649467415}
   - {fileID: 1399243439}
-  - {fileID: 1503131467}
