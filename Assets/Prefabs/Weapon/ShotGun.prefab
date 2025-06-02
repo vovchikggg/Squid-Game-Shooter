@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2285914829319121731}
   - component: {fileID: 8765325129946579044}
-  - component: {fileID: 3890544999135173855}
   - component: {fileID: 3123435307327049282}
+  - component: {fileID: 3890544999135173855}
   - component: {fileID: 6805851257679702941}
   - component: {fileID: 2219342261449964482}
   m_Layer: 0
@@ -52,6 +52,20 @@ MonoBehaviour:
   bullet: {fileID: 7338573560153732319, guid: 2976c29278a3a1547b9c498446a84d54, type: 3}
   shotPoint: {fileID: 6016240536791431650}
   startTimeBtwShot: 0.15
+--- !u!114 &3123435307327049282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6972888671874088551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2c7972045708b489a1a457dea10a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 664143717564353001, guid: adceb631e0ad3cc41bc48377bd7b3e29, type: 3}
+  itemPickedUp: 0
 --- !u!212 &3890544999135173855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,20 +121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3123435307327049282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6972888671874088551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf2c7972045708b489a1a457dea10a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 664143717564353001, guid: adceb631e0ad3cc41bc48377bd7b3e29, type: 3}
-  itemPickedUp: 0
 --- !u!58 &6805851257679702941
 CircleCollider2D:
   m_ObjectHideFlags: 0

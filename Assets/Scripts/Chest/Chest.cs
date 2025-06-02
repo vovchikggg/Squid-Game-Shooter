@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
-        transform.localScale *= shrinkFactor * damage;
+        transform.localScale *= 1 - shrinkFactor * damage;
         DetectDeath();
     }
 

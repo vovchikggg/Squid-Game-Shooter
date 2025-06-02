@@ -17,6 +17,7 @@ public class Pickup : MonoBehaviour
             if (!Inventory.Instance.isFull[i])
             {
                 itemPickedUp = true;
+                gameObject.GetComponent<CircleCollider2D>().enabled = false;
                 Inventory.Instance.isFull[i] = true;
                 Instantiate(icon, Inventory.Instance.slots[i].transform);
                 Destroy(gameObject);

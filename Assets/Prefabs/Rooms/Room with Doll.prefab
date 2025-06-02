@@ -1592,6 +1592,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5013133448114447319, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5493198472420475379, guid: 16faac464a7fa594681a59465dd3fc02, type: 3}
       propertyPath: m_Name
       value: Bot (3)
