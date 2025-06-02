@@ -1,8 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BotAI : MonoBehaviour
+public class BotAI_shotgun : MonoBehaviour
 {
-    [SerializeField] public Knife Knife;
+    [SerializeField] public ShotGun Gun;
     public float speed = 3f;  // �������� �������� ����
     public float stoppingDistance = 1f; // ����������, �� ������� ��� ��������������� ����� �������
     public Transform target; // ������ �� ������ ������ (���������� ������ � ��� ���� � ����������)
@@ -12,8 +12,6 @@ public class BotAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-        Knife.SetAttack(true);
         
         // ���� ���� �� ���������, ���������� ����� ������ �� ���� "Player"
         if (target == null)
@@ -36,7 +34,8 @@ public class BotAI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInSight = true;
-            Debug.Log("Player In Sight!!!!!");
+            Gun.SetFire(true);
+            //Debug.Log("Player In Sight!!!!!");
         }
     }
 
@@ -46,6 +45,7 @@ public class BotAI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInSight = false;
+            Gun.SetFire(true);
         }
     }
 
@@ -62,7 +62,7 @@ public class BotAI : MonoBehaviour
             if (distance > stoppingDistance)
             {
                 rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-                rb.SetRotation(Vector2.SignedAngle(direction, Vector2.up));
+                rb.SetRotation(Vector2.SignedAngle(direction, Vector2.right));
             }
         }
     }
