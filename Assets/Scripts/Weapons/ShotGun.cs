@@ -6,7 +6,7 @@ public class ShotGun : MonoBehaviour
     public Transform shotPoint;
     [SerializeField] private WeaponOwner weaponOwner;
 
-    private bool isFireShotGun;
+    public bool isFireShotGun;
     private float timeBtwShots;
     public float startTimeBtwShot;
 
