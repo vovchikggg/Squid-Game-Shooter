@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3480318930698696606}
   - component: {fileID: 9142523398952867609}
   - component: {fileID: 5570114925886171187}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7909528584589082028}
   - component: {fileID: 8091201855071109519}
   - component: {fileID: 1632482319048566496}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2441632176874475709}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 766264718353377323}
   - component: {fileID: 8154555502552078076}
   - component: {fileID: -8991235530593761638}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bot_shotgun
   m_TagString: EnemyEntity
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 4446355898716894484}
   - component: {fileID: 6223071312653087401}
   - component: {fileID: 2502138213204243236}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 4406972240483404615}
   - component: {fileID: 6455429542551079651}
   - component: {fileID: 913894288688604066}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
