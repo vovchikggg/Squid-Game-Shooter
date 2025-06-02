@@ -141,7 +141,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.75}
-  m_LocalScale: {x: 1.128872, y: 1.128872, z: 1.1288719}
+  m_LocalScale: {x: 3.8240578, y: 3.8240578, z: 1.529623}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2072160114593625864}
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  weaponOwner: 0
 --- !u!114 &2852619719008907035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,12 +221,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.77528304, y: 1.2565665}
-      - {x: -1.1116228, y: 0.37317115}
-      - {x: -0.8724628, y: -0.056877792}
-      - {x: -0.30011395, y: 0.0644425}
-      - {x: -0.030667752, y: 0.8084878}
-      - {x: -0.24425308, y: 1.411702}
+    - - {x: -1.1365784, y: 1.846267}
+      - {x: -1.138387, y: 0.9321662}
+      - {x: -0.8234624, y: -0.21236789}
+      - {x: -0.06713103, y: -0.2874388}
+      - {x: -0.08350234, y: 0.5567506}
+      - {x: -0.9405795, y: 1.8742446}
   m_UseDelaunayMesh: 0
 --- !u!58 &6608538818858181004
 CircleCollider2D:
