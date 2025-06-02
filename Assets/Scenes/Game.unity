@@ -5113,20 +5113,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3363886, y: 1.265537}
-      - {x: 0.7354766, y: 1.5498892}
-      - {x: 0.031119227, y: 1.3245661}
-      - {x: -0.47753495, y: 0.71324277}
-      - {x: -0.595322, y: 0.07965237}
-      - {x: -0.48384112, y: -0.56648135}
-      - {x: -0.11071259, y: -1.1824921}
-      - {x: 0.5259228, y: -1.5651147}
-      - {x: 0.9689312, y: -1.6482456}
-      - {x: 1.3688002, y: -1.304185}
-      - {x: 1.5436047, y: -0.87879264}
-      - {x: 1.8082373, y: -0.6781089}
-      - {x: 1.6407613, y: 0.31876296}
-      - {x: 1.5423076, y: 0.8034364}
+    - - {x: 0.5777978, y: 1.578505}
+      - {x: -0.12994927, y: 1.1516074}
+      - {x: -0.97271425, y: -0.48150787}
+      - {x: -1.0133796, y: -1.0821643}
+      - {x: -0.70690525, y: -1.5453966}
+      - {x: 0.11701262, y: -1.3157312}
+      - {x: 0.96838516, y: -1.6672283}
+      - {x: 2.0429406, y: -0.36680213}
+      - {x: 1.5624053, y: 0.6204251}
+      - {x: 1.1892971, y: 1.467732}
   m_UseDelaunayMesh: 0
 --- !u!4 &1512280687 stripped
 Transform:
@@ -5969,14 +5965,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751368417}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7088639, w: 0.7053453}
-  m_LocalPosition: {x: 2.981, y: -0.051, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
+  m_LocalPosition: {x: 1.88, y: -2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 910642473}
   m_Father: {fileID: 1503131467}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
 --- !u!1 &1780950651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.032
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a78a76b332292454587b2892f836e367, type: 3}
       propertyPath: m_LocalPosition.z
