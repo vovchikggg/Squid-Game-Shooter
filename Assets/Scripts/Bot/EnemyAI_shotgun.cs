@@ -54,7 +54,7 @@ public class BotAI_shotgun : MonoBehaviour
         if (target != null && playerInSight)
         {
             // ��������� ����������� � ������
-            Vector2 direction = target.position - transform.position;
+            Vector2 direction = transform.position - target.position ;
             var distance = direction.magnitude;
             direction.Normalize();  // ����������� ������ ��� ��������� �����������
 
@@ -62,9 +62,24 @@ public class BotAI_shotgun : MonoBehaviour
             if (distance > stoppingDistance)
             {
                 rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-                rb.SetRotation(Vector2.SignedAngle(direction, Vector2.right));
+                var angle = AngleBetweenTwoVectors(Vector2.left, direction);
+                Debug.Log(angle);
+                rb.SetRotation(angle + 15);
             }
         }
+    }
+    
+    // Вспомогательная функция для вычисления угла между двумя векторами
+    public static float AngleBetweenTwoVectors(Vector2 from, Vector2 to)
+    {
+        // Используем Atan2 для получения угла в радианах
+        float angle = Mathf.Atan2(to.y, to.x) - Mathf.Atan2(from.y, from.x);
+
+        // Преобразуем радианы в градусы
+        angle *= Mathf.Rad2Deg;
+
+        // Возвращаем угол
+        return angle;
     }
     
     void OnDrawGizmosSelected()
