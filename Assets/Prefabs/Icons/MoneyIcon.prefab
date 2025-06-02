@@ -115,4 +115,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 7460501867676537906}
-  weaponType: 0
+  itemType: 1
+  weaponType: 2

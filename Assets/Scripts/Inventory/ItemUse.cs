@@ -13,7 +13,21 @@ public class ItemUse : MonoBehaviour
     
     public void UseItem()
     {
-        ChangeWeapon();
+        if (inventory.slots[inventory.activeSlot].transform.childCount <= 0) return;
+        
+        var inventorySlotChild = inventory.slots[inventory.activeSlot].transform.GetChild(0);
+        if (!inventorySlotChild) return;
+        
+        var activeItem = inventorySlotChild.GetComponent<Icon>().itemType;
+        switch (activeItem)
+        {
+            case ItemType.Weapon:
+                ChangeWeapon();
+                break;
+            case ItemType.Money:
+                UseMoney();
+                break;
+        }
     }
 
     private void ChangeWeapon()
@@ -58,5 +72,9 @@ public class ItemUse : MonoBehaviour
         }
     }
     
-    
+    private void UseMoney()
+    {
+        PlayerScore.Instance.HandleMoney();
+        Destroy(Inventory.Instance.slots[Inventory.Instance.activeSlot].transform.GetChild(0).gameObject);
+    }
 }

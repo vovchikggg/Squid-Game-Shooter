@@ -5,8 +5,8 @@ public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore Instance;
     
-    [SerializeField] private int botCount;
-    [SerializeField] private Bar scoreBar;
+    [SerializeField] private int moneyCount;
+    [SerializeField] private Bar cashBar;
     
     private void Awake()
     {
@@ -15,18 +15,18 @@ public class PlayerScore : MonoBehaviour
     
     private void Start()
     {
-        scoreBar.SetMaxValue(botCount);
+        cashBar.SetMaxValue(moneyCount);
     }
     
-    public void HandleBotDeath()
+    public void HandleMoney()
     {
-        scoreBar.IncreaseValue(1f);
+        cashBar.IncreaseValue(1f);
         DetectWin();
     }
 
     private void DetectWin()
     {
-        if (scoreBar.GetCurrentValue() >= botCount)
+        if (cashBar.GetCurrentValue() >= moneyCount)
             GameManager.Instance.LoadWinScreen();
     }
 }

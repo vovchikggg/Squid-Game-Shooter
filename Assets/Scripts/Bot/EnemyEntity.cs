@@ -26,7 +26,6 @@ public class EnemyEntity : MonoBehaviour
         if (healthBar.GetCurrentValue() <= 0)
         {
             AudioManager.Instance.deathSound.Play();
-            PlayerScore.Instance.HandleBotDeath();
             Destroy(gameObject);
         }
     }
