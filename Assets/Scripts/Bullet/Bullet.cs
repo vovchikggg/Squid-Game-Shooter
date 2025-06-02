@@ -1,30 +1,48 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float speed;
     public float lifetime;
-    public float distance;
     public int damage;
-    public LayerMask whatIsSolid;
 
-    private void Update()
+    private Rigidbody2D rb;
+    
+    void Start()
     {
-        var hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        rb = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, lifetime);
+        if (rb)
+            rb.linearVelocity = transform.right * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Столкновение с: " + other.gameObject.name + ", слой: " + other.gameObject.layer);
         
-        if (hitInfo.collider)
+        var enemy = other.GetComponent<EnemyEntity>();
+        if (enemy)
         {
-            if (hitInfo.collider.GetComponent<EnemyEntity>())
-                hitInfo.collider.GetComponent<EnemyEntity>().TakeDamage(damage);
-            
-            if (hitInfo.collider.GetComponent<Chest>())
-                hitInfo.collider.GetComponent<Chest>().TakeDamage(damage);
-        
-            if (hitInfo.collider.GetComponent<PlayerEntity>())
-                hitInfo.collider.GetComponent<PlayerEntity>().TakeDamage(damage);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
+            return;
         }
-        
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+        var chest = other.GetComponent<Chest>();
+        if (chest)
+        {
+            chest.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
+
+        var player = other.GetComponent<PlayerEntity>();
+        if (player)
+        {
+            player.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
     }
 }
