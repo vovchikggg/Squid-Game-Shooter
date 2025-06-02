@@ -19,7 +19,9 @@ namespace TMPro.Examples
         {
             // Add new TextMesh Pro Component
             m_textMeshPro = gameObject.AddComponent<TextMeshPro>();
-
+            
+            if (! m_textMeshPro)
+                return;
             m_textMeshPro.autoSizeTextContainer = true;
 
             // Load the Font Asset to be used.
@@ -50,7 +52,8 @@ namespace TMPro.Examples
 
         void Update()
         {
-            m_textMeshPro.SetText(label, m_frame % 1000);
+            if (m_textMeshPro)
+                m_textMeshPro.SetText(label, m_frame % 1000);
             m_frame += 1 * Time.deltaTime;
         }
 
