@@ -108,7 +108,6 @@ MonoBehaviour:
   availableItems:
   - {fileID: -1945135178343785425, guid: c0c59e292392ece42b3a49af5bf540d3, type: 3}
   - {fileID: 8765325129946579044, guid: e599812d9aafc6342bb6998c3b68c0fe, type: 3}
-  - {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
 --- !u!61 &8680225744217696449
 BoxCollider2D:
   m_ObjectHideFlags: 0
