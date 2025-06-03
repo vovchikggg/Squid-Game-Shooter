@@ -7,6 +7,7 @@ TagManager:
   - Bot
   - EnemyEntity
   - Inventory
+  - Wall
   layers:
   - Default
   - TransparentFX

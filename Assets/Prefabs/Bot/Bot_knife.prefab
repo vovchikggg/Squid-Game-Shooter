@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2b5feedf3f10a47b8b8ca60f0b0ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 20
   healthBar: {fileID: 5570114925886171187}
 --- !u!212 &5013133448114447319
 SpriteRenderer:
@@ -404,9 +404,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13295011, y: -1.281648}
-  m_Size: {x: 39.825893, y: 67.51518}
-  m_Direction: 0
+  m_Offset: {x: -7.9941473, y: 5.423231}
+  m_Size: {x: 92.709236, y: 58.16922}
+  m_Direction: 1
 --- !u!50 &766264718353377323
 Rigidbody2D:
   serializedVersion: 5
@@ -673,6 +673,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
       propertyPath: weaponOwner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+      propertyPath: damageAmount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7132115487048542755, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}

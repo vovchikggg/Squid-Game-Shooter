@@ -66,7 +66,8 @@ public class Knife : Item
         {
             case WeaponOwner.Player:
             {
-                if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+                var capsuleCollider = collision.GetComponent<CapsuleCollider2D>();
+                if (capsuleCollider && collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
                     enemyEntity.TakeDamage(damageAmount);
                 break;
             }

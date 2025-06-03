@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         {
             case WeaponOwner.Player:
             {
-                if (collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
+                if (collision is CapsuleCollider2D && collision.transform.TryGetComponent(out EnemyEntity enemyEntity))
                 {
                     enemyEntity.TakeDamage(damage);
                     Destroy(gameObject);
@@ -46,6 +46,11 @@ public class Bullet : MonoBehaviour
         if (collision.transform.TryGetComponent(out Chest chest))
         {
             chest.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+
+        if (collision.CompareTag("Wall"))
+        {
             Destroy(gameObject);
         }
     }
