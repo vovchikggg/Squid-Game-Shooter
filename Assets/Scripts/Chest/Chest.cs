@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int _currentHealth;
     [SerializeField] private float shrinkFactor;
-    [SerializeField] private List<Item> items;
+    [SerializeField] private Item[] availableItems;
     
     private void Start()
     {
@@ -25,10 +25,9 @@ public class Chest : MonoBehaviour
     {
         if (_currentHealth <= 0)
         {
-            foreach (var item in items)
-            {
-                Instantiate(item, transform.position, Quaternion.identity);
-            }
+            var randomIndex = Mathf.FloorToInt(Random.value * availableItems.Length);
+            var randomItem = availableItems[randomIndex];
+            Instantiate(randomItem, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
