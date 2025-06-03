@@ -14,12 +14,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
         menuIsActive = menuIsStatic;
     }
 
     private void Start()
     {
+        Time.timeScale = 1f;
         if (menuPanel)
             menuPanel.SetActive(menuIsStatic);
         if (settingsPanel)
@@ -55,28 +55,34 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Story & Tips");
     }
+    
+    public void LoadLevelSelection()
+    {
+        SceneManager.LoadScene("LevelSelection");
+    }
 
     public void Play()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
+    }
+    
+    public void Play1()
+    {
+        SceneManager.LoadScene("Game1");
     }
 
     public void LoadWinScreen()
     {
-        Time.timeScale = 0f;
         SceneManager.LoadScene("Win Screen");
     }
 
     public void LoadLossScreen()
     {
-        Time.timeScale = 0f;
         SceneManager.LoadScene("Loss Screen");
     }
 
     public void Back()
     {
-        Time.timeScale = 0f;
         SceneManager.LoadScene("Main Menu");
     }
 
@@ -96,7 +102,6 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
-        Time.timeScale = 0f;
         Application.Quit();
     }
 }

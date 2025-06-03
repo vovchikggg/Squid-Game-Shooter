@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   takingDamageSound: {fileID: 0}
   deathSound: {fileID: 0}
+  shotSound: {fileID: 0}
   musicVolumeSlider: {fileID: 942222212}
   sfxVolumeSlider: {fileID: 1558286185}
   musicAudio:
@@ -2645,7 +2646,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 483777970}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: LoadLevelSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
