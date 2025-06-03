@@ -105,10 +105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   shrinkFactor: 0.06
-  icons:
-  - {fileID: 2309847699303681165, guid: 4e5a0926ffcf13e48831af6c9be82c29, type: 3}
-  - {fileID: 7186635012552188713, guid: adceb631e0ad3cc41bc48377bd7b3e29, type: 3}
-  - {fileID: 3905596306860926490, guid: 2a757c75d02a66048a3109004710a396, type: 3}
+  items:
+  - {fileID: 6228157998630904431, guid: 2fff35fcf588bb449a6789ee0efcf53f, type: 3}
+  - {fileID: 8765325129946579044, guid: e599812d9aafc6342bb6998c3b68c0fe, type: 3}
+  - {fileID: -1945135178343785425, guid: c0c59e292392ece42b3a49af5bf540d3, type: 3}
 --- !u!61 &8680225744217696449
 BoxCollider2D:
   m_ObjectHideFlags: 0

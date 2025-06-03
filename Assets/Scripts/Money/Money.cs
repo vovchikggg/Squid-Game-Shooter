@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
 
-public class Money : MonoBehaviour
+public class Money : Item
 {
 }
