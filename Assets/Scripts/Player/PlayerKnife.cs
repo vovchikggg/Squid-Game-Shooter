@@ -28,13 +28,13 @@ public class PlayerKnife : MonoBehaviour
         if (Input.GetMouseButton(0)) // 0 - левая кнопка мыши
         {
             Knife.SetAttack(true);
+            animator.SetBool(IS_ATTACK_KNIFE, true);
         }
         else
         {
             Knife.SetAttack(false);
+            animator.SetBool(IS_ATTACK_KNIFE, false);
         }
-        animationRun();
-        animationAttack();
     }
 
     public void Attack()
