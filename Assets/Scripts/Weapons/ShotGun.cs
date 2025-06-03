@@ -12,6 +12,8 @@ public class ShotGun : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isFireShotGun)
+            return;
         if (timeBtwShots <= 0)
         {
             if (!gameObject.GetComponent<Pickup>().itemPickedUp) return;
