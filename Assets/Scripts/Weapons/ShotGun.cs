@@ -22,6 +22,7 @@ public class ShotGun : Item
                 if (!Input.GetMouseButton(0))
                     return;
             
+            AudioManager.Instance.shotSound.Play();
             var current_bullet = Instantiate(bullet, shotPoint.position, transform.rotation);
             current_bullet.GetComponent<Bullet>().weaponOwner = weaponOwner;
             timeBtwShots = startTimeBtwShot;
